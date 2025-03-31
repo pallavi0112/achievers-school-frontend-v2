@@ -1,0 +1,47 @@
+import React from "react";
+import Banner from "@/components/Banner";
+import SubTitle from "@/components/SubTitle";
+import Title from "@/components/Title";
+import ContentCard from "@/components/ContentCard";
+import { Breadcrumb } from "@/interfaces";
+
+const breadcrumbs: Breadcrumb[] = [
+    { label: "Home", url: "/" },
+    { label: "About Us", url: "/about-us/principals-note" },
+    { label: "Principal’s Note", url: "/about-us/principals-note" },
+];
+
+const PrincipalsNote = () => {
+    return (
+        <>
+            <Banner backgroundImage="/images/Section.png" pageTitle="Principal’s Note" breadcrumbs={breadcrumbs} />
+
+            <section className="px-[100px] py-[50px] bg-[#F6F6FF]">
+                <SubTitle subTitle="Welcome from," textAlign="left" />
+                <Title title="The Principal" textAlign="left" />
+                <ContentCard
+                    image="/images/Content.png"
+                    alt="Principal’s Note"
+                    imageLeft={true}
+                    description={
+                        <>
+                            <p className="mb-4 text-[18px] text-[#000] text-justify">Dear Parents, Students, and Esteemed Community Members,</p>
+                            <p className="mb-4 text-[18px] text-[#000] text-justify">With great pleasure and honour, I welcome you to Achievers International School, where our commitment to excellence and holistic development sets the foundation for our student's success. As the Principal, I am privileged to lead a community that believes in nurturing every child's unique talents and aspirations. Our mission is to provide an environment where academic rigour harmoniously blends with character-building, creativity, and critical thinking.</p>
+                            <p className="mb-4 text-[18px] text-[#000] text-justify">At Achievers International, we take pride in being pioneers of AI-integrated classrooms. Our recognition as the No. 1 CBSE school in the region is a testament to our pursuit of innovation. Our dedicated educators strive to instil a lifelong love for learning, empowering students to explore their passions, embrace challenges, and develop resilience. We recognise that education goes beyond textbooks, and we offer a rich curriculum balanced with extracurricular activities to encourage holistic growth.</p>
+                            <p className="mb-4 text-[18px] text-[#000] text-justify">We also believe that a strong partnership between school and home is crucial for our students' success. Your involvement and support are invaluable as we work together to create a nurturing and stimulating environment.</p>
+                        </>
+                    }
+                />
+                <div>
+                    <p className="mb-4 text-[18px] text-[#000] text-justify">This website serves as a comprehensive resource for information about our school's programs, policies, and upcoming events. We invite you to explore its various sections and stay connected with our vibrant school community.</p>
+                    <p className="mb-4 text-[18px] text-[#000] text-justify">As we embark on this journey together, let us remember that education is a shared endeavour—one that shapes confident individuals and compassionate citizens.</p>
+                    <p className="mb-4 text-[18px] text-[#000] text-justify"><strong>Warm regards,</strong></p>
+                    <p className="mb-2 text-[20px] text-[#000] text-justify"><strong>Principal's Name</strong></p>
+                    <p className=" text-[18px] text-[#000]"><strong> Principal, Achievers International School</strong></p>
+                </div>    
+            </section>
+        </>
+    );
+};
+
+export default PrincipalsNote;

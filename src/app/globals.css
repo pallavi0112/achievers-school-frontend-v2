@@ -1,4 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -10,15 +14,49 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+::-webkit-scrollbar {
+  width: 5px;
 }
 
+::-webkit-scrollbar-track {
+  background: #ECECF4;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3F4092;
+  border-radius: 8px;
+  border: 1px solid #ECECF4;
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background-color: #ECECF4;
+} */
+/* 
+/* For Firefox */
+/* html {
+  scrollbar-width: thin;
+  scrollbar-color: #3F4092 #f1f1f1;
+} */ 
+
 body {
-  color: var(--foreground);
+  /* color: var(--foreground); */
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
+
+.slick-arrow,
+.slick-prev ,
+.slick-next{
+  display : none !important
+}
+
