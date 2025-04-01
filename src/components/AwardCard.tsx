@@ -9,7 +9,8 @@ interface AwardCardProps {
 
 const AwardCard: React.FC<AwardCardProps> = ({ image, description, index }) => {
   return (
-    <div 
+    <>
+      <div 
       className={`flex flex-col justify-end items-center transition-all duration-300  my-2
       ${index === 1 ? "scale-110 translate-y-[-10px]" : "scale-90 translate-y-[10px]"}`}
     >
@@ -19,6 +20,7 @@ const AwardCard: React.FC<AwardCardProps> = ({ image, description, index }) => {
 
       <span className="mt-2 text-[#fff] text-center">{description}</span>
     </div>
+    </>
   );
 };
 
