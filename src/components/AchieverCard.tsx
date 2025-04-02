@@ -11,7 +11,7 @@ interface AchieverCardProps {
 
 const AchieverCard: React.FC<AchieverCardProps> = ({ title, description, image }) => {
     return (
-        <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[50px] bg-gradient-to-b from-white-700 to-blue-50">
+        <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[24px] md:py-[50px] bg-gradient-to-b from-white-700 to-blue-50">
         <div className="flex flex-col-reverse md:flex-row ">
             <div className="flex-1 pt-[32px] sm:pt-[64px] md:pt-0">
                 <Tag

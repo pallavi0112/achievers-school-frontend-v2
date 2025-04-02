@@ -89,7 +89,7 @@ const data = [
 const Award: React.FC = () => {
     return (
         <section
-            className="relative bg-[#1A1B3D] h-auto lg:h-[85vh] flex flex-col justify-end items-center px-6 sm:px-12 lg:px-24 py-[50px]"
+            className="relative bg-[#1A1B3D] h-auto lg:h-[85vh] flex flex-col justify-end items-center px-6 sm:px-12 lg:px-24 py-[24px] md:py-[50px]"
             style={{
                 background: "linear-gradient(0deg, rgba(26, 27, 61, 0.60) 0%, rgba(26, 27, 61, 0.60) 100%), url('/images/award section.png')",
                 backgroundSize: "cover",

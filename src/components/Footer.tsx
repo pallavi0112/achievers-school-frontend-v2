@@ -17,6 +17,21 @@ const Footer: React.FC = () => {
         }}
       >
         {/* Logo and School Name */}
+        {/* <div className="flex flex-col items-center text-center">
+          <Image
+            src="/images/school Logo 1.png"
+            alt="Achievers International School"
+            width={200}
+            height={200}
+            className="w-20 h-20 mb-2"
+          />
+          <h2 className="text-xl font-bold">ACHIEVERS INTERNATIONAL SCHOOL</h2>
+          <p className="text-gray-300">Pratappur (C.G.)</p>
+        </div> */}
+
+        {/* Main Content */}
+        <div className="grid md:grid-cols-3 gap-10 mt-8 w-full max-w-6xl">
+
         <div className="flex flex-col items-center text-center">
           <Image
             src="/images/school Logo 1.png"
@@ -28,9 +43,6 @@ const Footer: React.FC = () => {
           <h2 className="text-xl font-bold">ACHIEVERS INTERNATIONAL SCHOOL</h2>
           <p className="text-gray-300">Pratappur (C.G.)</p>
         </div>
-
-        {/* Main Content */}
-        <div className="grid md:grid-cols-3 gap-10 mt-8 w-full max-w-6xl">
           {/* About Us Section */}
           <div>
             <h3 className="text-lg font-semibold mb-2">About Us</h3>
@@ -41,12 +53,7 @@ const Footer: React.FC = () => {
               No.1, we provide an innovative & dynamic learning environment
               where students thrive academically, socially, & personally.
             </p>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mx-auto my-4">
               <a
                 href="#"
                 className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
@@ -68,6 +75,31 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+          {/* Social Media Links */}
+          {/* <div className="flex flex-col items-center">
+            <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
+              >
+                <FaFacebookF/>
+              </a>
+              <a
+                href="#"
+                className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
+              >
+               <FaInstagram/>
+              </a>
+              <a
+                href="#"
+                className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
+              >
+               <FaYoutube/>
+              </a>
+            </div>
+          </div> */}
+
           {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold mb-2">Get In Touch</h3>
@@ -77,19 +109,19 @@ const Footer: React.FC = () => {
                 7999671694 | 9098418685
               </p>
             </div>
-            <div className="flex items-center space-x-2 mt-2">
+            <div className="flex items-center space-x-2 mt-4">
               <MdOutlineEmail/>
               <p className="text-gray-300 text-sm">
                 achieversinternationalpur@gmail.com
               </p>
             </div>
-            <div className="flex items-center space-x-2 mt-2">
+            <div className="flex items-center space-x-2 mt-4">
               <LuClock5 />
               <p className="text-gray-300 text-sm">
               Mon - Fri | 09:00 AM - 03:00 PM
               </p>
             </div>
-            <div className="flex items-center space-x-2 mt-2">
+            <div className="flex  space-x-2 mt-4">
               <FaLocationDot />
               <p className="text-gray-300 text-sm">
                 Near Indian Oil Petrol Pump, Ambikapur Road, Pratappur, Surajpur, Chhattisgarh - 497223
@@ -99,7 +131,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-700 w-full max-w-6xl mt-6 pt-4 text-center text-gray-400 text-sm">
+        <div className="md:flex md:justify-between border-t border-gray-700 w-full max-w-6xl mt-6 pt-4 text-center text-gray-400 text-sm">
           <p>
             Copyright © 2025 Achievers International School. All rights
             reserved.

@@ -4,6 +4,7 @@ import Award from '@/components/Award';
 import Facilities from '@/components/Facilities';
 import Gallery from '@/components/Gallery';
 import HeroSection from '@/components/HeroSection';
+import Links from '@/components/Links';
 import PrincipalSection from '@/components/PrincipalSection';
 
 
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <Links/>
       <AboutCard
         imageSrc="/images/Content.png"
         subtitle="MISSION"

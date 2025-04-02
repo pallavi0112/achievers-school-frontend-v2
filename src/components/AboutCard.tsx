@@ -11,7 +11,7 @@ interface AboutCardProps {
 
 const AboutCard: React.FC<AboutCardProps> = ({ imageSrc, subtitle, title, paragraphs }) => {
     return (
-        <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[64px]">
+        <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[24px] md:py-[50px]">
             <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 ">
                     <Image src={imageSrc} alt={title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' , objectFit: 'cover', borderRadius:'20px'}} />
