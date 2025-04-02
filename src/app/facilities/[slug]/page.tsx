@@ -18,7 +18,7 @@ const Page = () => {
         "/facilities/smart-class" : <MandatoryDisclosure />,
     };
 
-    return routes[pathname] || <h1 className="text-center mt-10 text-red-500 text-2xl">Page Not Found</h1>;
+    return pathname ? routes[pathname] : <h1 className="text-center mt-10 text-red-500 text-2xl">Page Not Found</h1>;
 };
 
 export default Page;
