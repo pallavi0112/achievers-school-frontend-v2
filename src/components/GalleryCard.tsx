@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 interface GalleryCardProps {
   image: string;
@@ -28,9 +29,10 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ image, title, date }) => {
       {/* View All Button */}
       <a
         href="#"
-        className="absolute bottom-4 right-0 bg-white text-gray-800 px-4 py-1 text-sm rounded-full shadow-md opacity-0 group-hover:opacity-100 transition"
+        className="absolute flex gap-2 justify-center items-center bottom-4 right-2 bg-[#ccc] text-[#fff] px-4 py-2 text-sm rounded-md shadow-md opacity-0 group-hover:opacity-100 transition"
       >
         View All
+        <MdOutlineArrowOutward />
       </a>
     </div>
   );

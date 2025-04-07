@@ -25,23 +25,23 @@ const HeroSection: React.FC = () => {
         <Image 
           src="/images/school Logo 1.png"
           alt="AISP Logo"
-          width={150}
-          height={150}
-          className="mx-auto mb-4"
+          width={100}
+          height={100}
+          className="mx-auto mb-4 w-[100px] h-[100px]  md:w-[150px] md:h-[150px]"
         />
 
         {/* Welcome Heading */}
-        <h1 className="text-2xl font-semibold tracking-wide font-[family-name:var(--font-plus-jakarta)]">
+        <h1 className="max-sm:text-lg text-xl md:text-2xl font-semibold tracking-wide font-[family-name:var(--font-plus-jakarta)]">
           WELCOME TO
         </h1>
 
         {/* School Name */}
-        <p className="text-4xl md:text-5xl font-bold tracking-wide font-[family-name:var(--font-playfair)] mt-2">
+        <p className="max-sm:text-xl text-2xl md:text-5xl font-bold tracking-wide font-[family-name:var(--font-playfair)] mt-2">
           ACHIEVERS INTERNATIONAL SCHOOL
         </p>
 
         {/* Location */}
-        <div className="flex items-center justify-center text-lg font-light mt-4 font-[family-name:var(--font-plus-jakarta)]">
+        <div className="flex items-center justify-center  text-sm md:text-lg font-light mt-4 font-[family-name:var(--font-plus-jakarta)]">
           {/* <FaMapMarkerAlt className="mr-2 text-white" /> */}
           <span>A CBSE AFFILIATED SENIOR SECONDARY SCHOOL, Aff. No. 3330478</span>
         </div>

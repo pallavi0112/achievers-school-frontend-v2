@@ -25,7 +25,7 @@ const Counter: React.FC<CounterProps> = ({ icon, number, label }) => {
         <div className="text-[16px] md:text-2xl font-bold">
           <CountUp end={number} duration={2} separator="," /> +
         </div>
-        <p className="text-[#6B7280] text-[12px] sm:text-[16px]">{label}</p>
+        <p className="text-[#6B7280] text-[12px] md:text-[16px]">{label}</p>
       </div>
     </div>
   );

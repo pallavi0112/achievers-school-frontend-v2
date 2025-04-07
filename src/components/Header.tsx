@@ -10,20 +10,20 @@ import { showSideBar } from "@/redux/slices/sidebarSlice";
 const Header: React.FC = () => {
   const dispatch = useDispatch()
   return (
-    <header className="bg-white text-black py-[15px] px-[40px] flex justify-between items-center w-full h-18 shadow-md">
+    <header className="bg-white text-black py-[15px] max-sm:p-[10px] sm:px-[40px] flex justify-between items-center w-full h-18 shadow-md">
       {/* Left: Logo & Name */}
-      <div className="flex items-center space-x-4 max-lg:w-full">
-        <Image src="/images/logo.png" alt="Logo" width={50} height={50} />
+      <div className="flex space-x-4 max-lg:w-full">
+        <Image src="/images/logo.png" alt="Logo" width={50} height={50} className="w-[50] h-[50] max-sm:w-[30px] max-sm:h-[30px]"/>
         <div>
-          <h1 className="lg:text-lg xl:text-2xl font-light text-[#393A85]">
+          <h1 className="max-sm:text-[12px] max-sm:text-bold lg:text-lg xl:text-2xl font-[700] text-[#393A85]">
             ACHIEVERS INTERNATIONAL SCHOOL
           </h1>
           <p className="text-xs text-gray-600">
-            Near Indian Oil Petrol Pump, Pratappur, Chhattisgarh
+          Near Indian Oil Petrol Pump, Pratappur (C.G.)
           </p>
         </div>
         <div className="block lg:hidden ml-auto">
-          <FaBars className="text-[#3F4092] text-[25px] cursor-pointer" onClick={()=>dispatch(showSideBar())}/>
+          <FaBars className="text-[#3F4092] max-sm:text-[18px] text-[25px] cursor-pointer" onClick={()=>dispatch(showSideBar())}/>
         </div>
       </div>
       {/* Right: Social Links & Contact */}
@@ -32,7 +32,6 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-1">
               <HiOutlinePhone className="xl:text-xl lg:text-md text-[#3F4092]" />
               <span className="text-[#2D2D68] xl:text-[14px] lg:text-[12px] font-[500]">7999671694 | 9098418685</span>
-        
           </div>
           <div className="flex items-center gap-1">
             <MdOutlineEmail className="xl:text-xl lg:text-md text-[#3F4092]" />

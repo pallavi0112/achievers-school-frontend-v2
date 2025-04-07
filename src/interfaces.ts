@@ -23,3 +23,10 @@ export interface Breadcrumb {
     label: string;
     url?: string; 
   }
+
+export interface LinkItem {
+    img: string;
+    text: string;
+    link?: string; // optional link
+  }
+  

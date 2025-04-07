@@ -68,8 +68,7 @@ const CustomizeSlider = ({
     <div className="relative w-full">
       {/* Header and Navigation */}
       <div className="flex justify-between items-center mb-8 mt-1">
-        <h2 className={ source === "news" ? "text-3xl text-[#fff]" : "text-3xl text-[#041533]"}>{header}</h2>
-        
+        <h2 className={`${ source === "news" ? "text-[#fff]" : "text-[#041533]"} max-sm:text-[20px] sm:text-[32px]  `}>{header}</h2>
         {/* Navigation Buttons */}
         {isNavigationShow && (
           <div className="flex gap-2">

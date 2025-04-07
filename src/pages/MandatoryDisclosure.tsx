@@ -14,11 +14,11 @@ const breadcrumbs: Breadcrumb[] = [
 const MandatoryDisclosure = () => {
     return (
         <>
-            <Banner backgroundImage="/images/Section.png" pageTitle="Mandatory Disclosure (CBSE)" breadcrumbs={breadcrumbs} />
+            <Banner backgroundImage="/images/Section.png" pageTitle="Mandatory Disclosure" breadcrumbs={breadcrumbs} />
 
-            <section className="px-[100px] py-[50px] bg-[#F6F6FF]">
+            <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
                 <SubTitle subTitle="Important Information" textAlign="left" />
-                <Title title="Mandatory Disclosure" textAlign="left" />
+                <Title title="Mandatory Disclosure (CBSE)" textAlign="left" />
                 <ContentCard
                     image="/images/Content.png"
                     alt="Mandatory Disclosure"

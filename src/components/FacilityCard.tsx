@@ -32,7 +32,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ image, title, description, 
             <Image src={iconImage} alt="icon" width={24} height={24} className="object-contain" />
           </div>
 
-          <h2 className="text-lg font-semibold">{title}</h2>
+          <h2 className="font-semibold text-[16px] lg:text-[20px] text-[#424242]">{title}</h2>
         </div>
         <p className="text-gray-600 text-sm mt-2 line-clamp-2">{description}</p>
       </div>

@@ -6,7 +6,7 @@ interface SubTitleProps {
 }
 const SubTitle:React.FC<SubTitleProps> = ({subTitle, textAlign}) => {
   return (
-    <p className={`text-[#6566A8] text-[20px] font-[500] ${
+    <p className={`text-[#6566A8] text-[18px] md:text-[24px] font-[500] ${
         textAlign === "left"
           ? "text-left"
           : textAlign === "center"

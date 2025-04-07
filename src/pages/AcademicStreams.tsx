@@ -22,7 +22,7 @@ const AcademicStreams = () => {
     return (
         <>
             <Banner backgroundImage="/images/Section.png" pageTitle="ACADEMIC STREAMS (XI & XII)" breadcrumbs={breadcrumbs} />
-            <section className="px-[100px] py-[50px] bg-[#F6F6FF]">
+            <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
                 <SubTitle subTitle="Welcome to," textAlign="left" />
                 <Title title="Achievers International School!" textAlign="left" />
                 <StreamTable streamName="Arts" subjects={subjects} />
