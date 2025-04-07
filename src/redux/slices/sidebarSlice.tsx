@@ -5,11 +5,13 @@ import { RootState } from '../store'
 // Define a type for the slice state
 interface SidebarState {
   isShow:Boolean 
+  isLatestUpdatesModalOpen:Boolean
 }
 
 // Define the initial state using that type
 const initialState: SidebarState = {
   isShow: false,
+  isLatestUpdatesModalOpen: false,
 }
 
 export const sidebarSlice = createSlice({
@@ -23,10 +25,16 @@ export const sidebarSlice = createSlice({
     hideSideBar: (state) => {
       state.isShow =  false
     },
+    showLatestUpdatesModal: (state) => {
+      state.isLatestUpdatesModalOpen = true
+    },
+    hideLatestUpdatesModal: (state) => {
+      state.isLatestUpdatesModalOpen = false
+    }
   },
 })
 
-export const { showSideBar, hideSideBar } = sidebarSlice.actions
+export const { showSideBar, hideSideBar , showLatestUpdatesModal , hideLatestUpdatesModal} = sidebarSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const isSideBarShow = (state: RootState) => state.sidebarSlice.isShow

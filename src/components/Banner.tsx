@@ -18,7 +18,7 @@ const Banner: React.FC<BannerProps> = ({ backgroundImage, pageTitle, breadcrumbs
       {/* Content */}
       <div>
         {/* Page Title with Left & Right Lines */}
-        <h1 className="relative text-3xl font-bold uppercase inline-block px-4 before:content-[''] before:absolute before:left-[-60%] before:top-1/2 before:w-[50%] before:h-[4px] before:rounded-xs before:bg-white after:content-[''] after:absolute after:right-[-60%] after:top-1/2 after:w-[50%] after:h-[4px] after:rounded-xs after:bg-white">
+        <h1 className="relative md:text-[32px] text-[18px] font-bold uppercase inline-block px-4 before:content-[''] before:absolute before:left-[-21%] md:before:left-[-60%] before:top-1/2  before:w-[25%] md:before:w-[50%] before:h-[4px] before:rounded-xs before:bg-white after:content-[''] after:absolute after:right-[-21%] md:after:right-[-60%] after:top-1/2 after:w-[25%] md:after:w-[50%] after:h-[4px] after:rounded-xs after:bg-white">
           {pageTitle}
         </h1>
 

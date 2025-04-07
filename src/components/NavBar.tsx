@@ -1,41 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { MenuItem } from "@/interfaces";
 import { FaChevronDown as ChevronDown, FaChevronRight as ChevronRight, FaBars} from "react-icons/fa";
 import navLinks from "@/data/navLinks";
 import { HiOutlinePhone } from "react-icons/hi";
 import { MdOutlineEmail } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { showSideBar } from "@/redux/slices/sidebarSlice";
+import { usePathname } from "next/navigation";
 
 interface NavbarProps {
   showHeader: boolean;
 }
 
 const NavBar: React.FC<NavbarProps> = ({ showHeader }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch()
+  const pathname = usePathname();
   return (
     <>
       <nav
-        className={`bg-[#3F4092] shadow-md w-full transition-transform duration-300 px-[40px] xl:px-[100px]  ${showHeader ? "translate-y-0 fixed top-0 left-0 z-50" : ""
+        className={`bg-[#3F4092] shadow-md w-full transition-transform duration-300 px-[20px] xl:px-[100px]  ${showHeader ? "translate-y-0 fixed top-0 left-0 z-50" : ""
           }`}
       >
         <div className="hidden lg:block w-full mx-auto  flex justify-between items-center">
           <ul className="flex space-x-6 text-gray-800 w-full flex justify-between">
             {navLinks.map((item, index) => (
-              <NavItem key={index} item={item} />
+              <NavItem key={index} item={item} path={pathname} />
             ))}
           </ul>
         </div>
-        <div className={`flex flex-col ${showHeader ? '' : 'justify-center items-center'}  row-gap-[10px] text-sm lg:hidden text-[#fff] py-4 w-full`}>
-          <div className="flex items-center  justify-between gap-1">
-            <div className="flex">
+        <div className={`flex flex-col ${showHeader ? '' : 'justify-center items-center'}  gap-2 text-sm lg:hidden text-[#fff] py-4 w-full`}>
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex justify-center items-center gap-1">
               <HiOutlinePhone className="text-xl text-[#fff]" />
               <span className="text-[14px] font-[500]">7999671694 | 9098418685</span>
             </div>
             <div className={`${showHeader ? 'block text-[25px] cursor-pointer' : 'hidden'}`}>
-              <FaBars />
+              <FaBars onClick={()=>dispatch(showSideBar())}/>
             </div>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex gap-1">
             <MdOutlineEmail className="text-xl text-[#fff]" />
             <a
               href="mailto:achieversinternationalppur@gmail.com"
@@ -50,12 +54,20 @@ const NavBar: React.FC<NavbarProps> = ({ showHeader }) => {
   );
 };
 
-const NavItem: React.FC<{ item: MenuItem }> = ({ item }) => {
+const NavItem: React.FC<{ item: MenuItem , path:String|null }> = ({ item, path }) => {
+  const isActive = item.link && path === item.link;
   return (
     <li className="relative group xl:text-[14px] lg:text-[10px] py-4">
       {item.link ? (
-        <Link href={item.link} className="flex items-center gap-1 text-[#FFFFFF]">
+        <Link 
+        href={item.link} 
+        className={`flex items-center gap-1 text-[#FFFFFF] relative ${
+          isActive ? 'font-bold' : ''
+        }`}>
           {item.label}
+          {isActive && (
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+          )}
         </Link>
       ) : (
         <span className="cursor-pointer flex items-center gap-1 text-[#FFFFFF]">
@@ -72,10 +84,14 @@ const NavItem: React.FC<{ item: MenuItem }> = ({ item }) => {
                      before:content-[''] before:absolute before:top-[-6px] before:left-5 
                      before:border-[6px] before:border-transparent before:border-b-white"
         >
-          {item.submenu.map((subItem, index) => (
+          {item.submenu.map((subItem, index) => {
+            const isSubActive = subItem.link && path === subItem.link;
+            return (
             <li
               key={index}
-              className="px-4 py-2 text-[#2D2D68] hover:bg-[#ECECF4] rounded-sm hover:font-[600] hover:text-[13px] relative group"
+              className={`px-4 py-2 text-[14px] text-[500] text-[#2D2D68] hover:bg-[#3F4092] hover:text-[#fff] rounded-sm relative group ${
+                isSubActive ? 'bg-[#3F4092] text-white font-semibold' : 'text-[#2D2D68]'
+              }`}
             >
               {subItem.submenu ? (
                 <div className="flex justify-between items-center cursor-pointer">
@@ -83,7 +99,7 @@ const NavItem: React.FC<{ item: MenuItem }> = ({ item }) => {
                   <ChevronRight className="xl:w-4 xl:h-4 lg:w-2 lg:h-2" />
                 </div>
               ) : (
-                <Link href={subItem.link || "#"} className="block hover:pl-4 transition-all ease-in-out duration-300">
+                <Link href={subItem.link || "#"} className="block hover:pl-3 transition-all ease-in-out duration-500">
                   {subItem.label}
                 </Link>
               )}
@@ -103,7 +119,7 @@ const NavItem: React.FC<{ item: MenuItem }> = ({ item }) => {
                 </ul>
               )}
             </li>
-          ))}
+          )})}
         </ul>
       )}
     </li>

@@ -19,10 +19,10 @@ const PrincipalSection: React.FC = () => {
             backgroundRepeat: "no-repeat"
         }}
         >
-            <div className="flex flex-col lg:flex-row items-start gap-10">
+            <div className="flex flex-col lg:flex-row items-start lg:gap-[96px] ">
                 {/* Left Section - Principal Message */}
                 <div className="w-full lg:w-1/2">
-                    <h2 className="text-3xl text-[#fff] mb-8">Principal’s Message</h2>
+                    <h2 className="max-sm:text-[20px] sm:text-[32px] text-[#fff] mb-8">Principal’s Message</h2>
                     <div className=' bg-[#fff] rounded-lg shadow-sm '>
                     <div className="relative w-full h-[350px] rounded-t-lg overflow-hidden shadow-lg">
                         {/* Principal Image */}
@@ -58,7 +58,7 @@ const PrincipalSection: React.FC = () => {
                 </div>
 
                 {/* Right Section - News & Events Slider */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
                     <CustomizeSlider
                         data={news}
                         header={"Media Coverage"}
