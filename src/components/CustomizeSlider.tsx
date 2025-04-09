@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FacilityCard from "./FacilityCard";
 import GalleryCard from "./GalleryCard";
-import NewsCard from "./NewsCard";
+// import NewsCard from "./NewsCard";
 import { FacilityInterface, GalleryInterface, NewsInterface } from "@/interfaces";
 import { BsArrowRight } from "react-icons/bs";
 import MediaCoverage from "./MediaCoverage";

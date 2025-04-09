@@ -3,7 +3,6 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import VisionMission from "@/pages/VisionMission";
 import PrincipalsNote from "@/pages/PrincipalsNote";
-import MandatoryDisclosure from "@/pages/MandatoryDisclosure";
 import AdmissionProcess from "@/pages/AdmissionProcess";
 import AcademicStreams from "@/pages/AcademicStreams";
 
