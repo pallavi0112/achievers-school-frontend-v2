@@ -23,22 +23,22 @@ const AchieverCard: React.FC<AchieverCardProps> = ({ title, description, image }
                 <p className="my-6 leading-8 max-md:text-[16px] md:text-[18px] text-[#2E2E2E]">{description}</p>
                 <div className="grid grid-cols-2 gap-[10px]">
                   <Counter
-                   icon = {'/images/Icon.png'}
+                   icon = {'/images/book.png'}
                    number={600}
                    label={'Students'}
                   />
                   <Counter
-                   icon = {'/images/Icon.png'}
+                   icon = {'/images/pen.png'}
                    number={30}
                    label={'Teachers'}
                   />
                   <Counter
-                   icon = {'/images/Icon.png'}
+                   icon = {'/images/happiness.png'}
                    number={1250}
                    label={'Happy Parents'}
                   />
                   <Counter
-                   icon = {'/images/Icon.png'}
+                   icon = {'/images/layers.png'}
                    number={3}
                    label={'Acres of Campus'}
                   />
