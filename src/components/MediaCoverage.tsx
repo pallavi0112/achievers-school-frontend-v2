@@ -12,7 +12,7 @@ const MediaCoverage: React.FC<MediaCoverageProps> = ({ item }) => {
             {/* Content Section (Title & Date) */}
             <div className="pb-4 border-none border-b border-gray-300">
                 <h2 className="text-lg font-semibold text-[#fff] leading-6">
-                Independence Day 2024
+                {item?.title || "Independence Day 2024"}
                 </h2>
                 <p className="text-[#fff] text-sm mt-1">15 Aug 2024</p>
             </div>
@@ -20,7 +20,7 @@ const MediaCoverage: React.FC<MediaCoverageProps> = ({ item }) => {
             {/* News Image */}
             <div className="relative w-full h-[350px]">
                 <Image
-                    src={"/images/news.png"}
+                    src={item?.image || "/images/news.png"}
                     alt="news"
                     layout="fill"
                     objectFit="cover"

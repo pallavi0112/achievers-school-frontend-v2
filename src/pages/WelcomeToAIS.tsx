@@ -32,7 +32,7 @@ const WelcomeToAIS = () => {
                     />
                 <div>
                     <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify">Our exceptional faculty is committed to igniting curiosity and shaping independent thinkers. Through personalised attention and innovative teaching methods, we empower students to embrace challenges confidently and with compassion, preparing them for a future without limits.</p>
-                    <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify">The success of our students speaks for itself. Their outstanding academic achievements and accolades in sports, arts, and cultural events have earned Achievers International School a distinguished reputation in the region. We are proud to be a beacon of excellence, shaping tomorrow's leaders, thinkers, and innovators.</p>
+                    <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify">The success of our students speaks for itself. Their outstanding academic achievements and accolades in sports, arts, and cultural events have earned Achievers International School a distinguished reputation in the region. We are proud to be a beacon of excellence, shaping tomorrow&apos;s leaders, thinkers, and innovators.</p>
                     <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify"><strong>Join us in building a community where knowledge lights the path and every child embarks on a journey of self-discovery and success.</strong></p>
                 </div>
             </section>
