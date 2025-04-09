@@ -89,7 +89,7 @@ const NavItem: React.FC<{ item: MenuItem , path:String|null }> = ({ item, path }
             return (
             <li
               key={index}
-              className={`px-4 py-2 text-[14px] text-[500] text-[#2D2D68] hover:bg-[#3F4092] hover:text-[#fff] rounded-sm relative group ${
+              className={`px-4 py-2 my-2 text-[14px] text-[500] text-[#2D2D68] hover:bg-[#3F4092] hover:text-[#fff] rounded-sm relative group ${
                 isSubActive ? 'bg-[#3F4092] text-white font-semibold' : 'text-[#2D2D68]'
               }`}
             >
