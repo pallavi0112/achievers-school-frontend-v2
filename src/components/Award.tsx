@@ -6,15 +6,15 @@ import AwardCard from "./AwardCard";
 
 const data = [
     {
-        "image": "/images/one logo.png",
+        "image": "/images/1st aw.png",
         "description": "Pioneering Excellence in Education"
     },
     {
-        "image": "/images/two.png",
+        "image": "/images/2nd aw.png",
         "description": "Recognized for Outstanding Growth & Innovation"
     },
     {
-        "image": "/images/third.png",
+        "image": "/images/3rd aw.png",
         "description": "Transforming Learning with Cutting-Edge Technology"
     }
 ];
