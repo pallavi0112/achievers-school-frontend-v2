@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
       <Links/>
       <AboutCard
-        imageSrc="/images/Content.png"
+        imageSrc="/images/1st Image.jpeg"
         subtitle="MISSION"
         title="Achievers International School, Pratappur"
         paragraphs={[
@@ -29,7 +29,7 @@ export default function Home() {
       <AchieverCard
         title='Why Study at Achievers International School?'
         description='At Achievers International School, we believe in excellence, innovation, and holistic development. With a strong academic foundation, expert faculty, and world-class infrastructure, we provide a nurturing environment where students thrive'
-        image="/images/Content.png"
+        image="/images/2nd Image.JPG"
       />
       <Facilities />
       <Award/>
