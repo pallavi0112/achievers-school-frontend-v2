@@ -11,8 +11,8 @@ interface AchieverCardProps {
 
 const AchieverCard: React.FC<AchieverCardProps> = ({ title, description, image }) => {
     return (
-        <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[24px] md:py-[50px] bg-gradient-to-b from-white-700 to-blue-50">
-        <div className="flex flex-col-reverse md:flex-row  lg:gap-[120px] md:gap-[50px]">
+        <section className="max-sm:px-[16px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[24px] md:py-[50px] bg-gradient-to-b from-white-700 to-blue-50">
+        <div className="flex flex-col-reverse lg:flex-row  lg:gap-[120px] md:gap-[50px]">
             <div className="flex-1 pt-[32px] sm:pt-[64px] md:pt-0">
                 <Tag
                     label='Impact'
@@ -44,7 +44,7 @@ const AchieverCard: React.FC<AchieverCardProps> = ({ title, description, image }
                   />
                 </div>
             </div>
-            <div className="flex-1 flex justify-center items-center min-h-[420px]">
+            <div className="flex-1 flex justify-center items-center lg:min-h-[420px]">
                 <Image src={image} alt={title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' , objectFit: 'cover', borderRadius:'20px'}} />
             </div>
         </div>

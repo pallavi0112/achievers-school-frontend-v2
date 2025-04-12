@@ -11,7 +11,7 @@ const PrincipalSection: React.FC = () => {
     const showReadMore = principalMessage.length > maxLength;
 
     return (
-        <section className="px-6 sm:px-12 lg:px-24 py-12"
+        <section className="px-6 sm:px-12 max-sm:px-[16px] lg:px-24 py-12"
         style={{
             background: "linear-gradient(0deg, rgba(26, 27, 61, 0.60) 0%, rgba(26, 27, 61, 0.60) 100%), url('/images/award section.png')",
             backgroundSize: "cover",
@@ -22,7 +22,7 @@ const PrincipalSection: React.FC = () => {
             <div className="flex flex-col lg:flex-row items-start lg:gap-[96px] ">
                 {/* Left Section - Principal Message */}
                 <div className="w-full lg:w-1/2">
-                    <h2 className="max-sm:text-[20px] sm:text-[32px] text-[#fff] mb-8">Principal’s Message</h2>
+                    <h2 className="max-sm:text-[20px] sm:text-[32px] font-[500] text-[#fff] mb-8">Principal’s Message</h2>
                     <div className=' bg-[#fff] rounded-lg shadow-sm '>
                     <div className="relative w-full h-[350px] rounded-t-lg overflow-hidden shadow-lg">
                         {/* Principal Image */}
@@ -35,7 +35,7 @@ const PrincipalSection: React.FC = () => {
                         {/* Overlay for Name & Designation */}
                         <div className="absolute bottom-0 left-0 w-[max-content] bg-[#3F4092] text-white p-4 rounded-tr-lg">
                             <p className="text-lg font-semibold">Principal’s Name</p>
-                            <p className="text-sm">Principal, Achievers International School, Pratappur</p>
+                            <p className="max-sm:text-xs text-sm">Principal, Achievers International School, Pratappur</p>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@ const PrincipalSection: React.FC = () => {
                         </p>
 
                         {showReadMore && (
-                            <Link href="/principal-message">
+                            <Link href="/about-us/principals-note">
                                 <span className="text-blue-600 font-medium mt-2 inline-block hover:underline">
                                     Read More →
                                 </span>

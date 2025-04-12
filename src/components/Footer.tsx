@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div
-        className="w-full flex flex-col items-center bg-cover bg-center px-6 sm:px-10 py-12"
+        className="w-full flex flex-col items-center bg-cover bg-center px-6 sm:px-10 max-sm:px-[16px] py-12"
         style={{
           backgroundImage:
             "linear-gradient(to top,rgba(35, 35, 80, 0.67), rgba(35, 35, 80, 0.67)), url(/images/Section.png)",
