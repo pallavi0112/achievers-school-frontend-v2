@@ -41,14 +41,14 @@ const MobileSidebar: React.FC = () => {
           {/* Header Icons */}
           <div className="bg-[#fff] p-5 flex flex-col justify-between">
             <div
-              className={`flex justify-between items-center ${isHomePage ? '' : 'border-b-2 border-b-[#CAC9FF] py-4'}`}
+              className={`flex justify-between items-center ${isHomePage ? '' : 'border-b-2 border-b-[#CAC9FF] py-[15px]'}`}
             >
               <div className="flex space-x-3">
                 {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, index) => (
                   <a
                     key={index}
                     href="#"
-                    className="text-[#2D2D68] bg-[#ECECF4] w-10 h-10 flex items-center justify-center rounded-full cursor-pointer"
+                    className="text-[#2D2D68] bg-[#ECECF4] w-8 h-8 flex items-center justify-center rounded-full cursor-pointer"
                   >
                     <Icon />
                   </a>
@@ -68,13 +68,18 @@ const MobileSidebar: React.FC = () => {
                     className="flex justify-center items-center border-2 gap-2 border-[#CAC9FF] bg-[#EEF] text-[#3B39B5] rounded-lg p-2 w-50 cursor-pointer"
                     onClick={() => handleClick(item)}
                   >
+                    <div
+                    className='w-6 h-6'
+                    >
                     <Image
                       src={item.img}
                       width={30}
                       height={30}
                       alt={item.text}
+                      className=''
                     />
-                    <p className="text-center mt-2">{item.text}</p>
+                    </div>
+                    <p className="text-[10px] font-[700]">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -120,7 +125,7 @@ const MobileSidebar: React.FC = () => {
                   {/* Submenu with smooth animation */}
                   <ul
                     className={`overflow-hidden transition-all duration-300 ease-in-out ${openDropdown === item.label
-                        ? 'max-h-40 opacity-100'
+                        ? 'max-h-48 opacity-100'
                         : 'max-h-0 opacity-0'
                       }  text-[#fff]`}
                   >

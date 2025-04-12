@@ -68,7 +68,7 @@ const CustomizeSlider = ({
     <div className="relative w-full">
       {/* Header and Navigation */}
       <div className="flex justify-between items-center mb-8 mt-1">
-        <h2 className={`${ source === "news" ? "text-[#fff]" : "text-[#041533]"} max-sm:text-[20px] sm:text-[32px]  `}>{header}</h2>
+        <h2 className={`${ source === "news" ? "text-[#fff]" : "text-[#041533]"} max-sm:text-[20px] sm:text-[32px] font-[500]`}>{header}</h2>
         {/* Navigation Buttons */}
         {isNavigationShow && (
           <div className="flex gap-2">
@@ -114,7 +114,7 @@ const CustomizeSlider = ({
                 data.map((item: GalleryInterface, index: number) => (
                   <div
                     key={index}
-                    className={`px-2 transition-all duration-300 ${index === expandedIndex ? "w-[500px]" : "w-[200px]"
+                    className={`sm:px-2 transition-all duration-300 ${index === expandedIndex ? "w-[500px]" : "w-[200px]"
                       }`}
                     onMouseEnter={() => setExpandedIndex(index)}
                   >
