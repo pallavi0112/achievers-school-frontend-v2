@@ -5,7 +5,7 @@ import facilities from '@/data/facilities'
 
 const Gallery:React.FC = () => {
   return (
-    <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[50px]">
+    <section className="max-sm:px-[16px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[50px]">
     <Tag
     label='Benefits'
     textColor='text-[#5350FF]'

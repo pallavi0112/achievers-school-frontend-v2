@@ -6,7 +6,7 @@ import Tag from './Tag'
 const Facilities = () => {
   return (
     <>
-    <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[50px]">
+    <section className="max-sm:px-[16px] sm:px-[30px] lg:px-[50px] xl:px-[100px] py-[50px]">
     <Tag
     label='Benefits'
     textColor='text-[#01A100]'
