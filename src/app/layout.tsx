@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import LocationMap from "@/components/LocationMap";
@@ -30,12 +29,6 @@ const playfairDisplay = Playfair_Display({
 });
 
 // Metadata (Next.js handles <head> automatically)
-export const metadata: Metadata = {
-  title: "AISP - Achiever International School Pratappur",
-  description: "A leading CBSE school providing quality education from Nursery to 12th grade.",
-  viewport: "width=device-width, initial-scale=1",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
