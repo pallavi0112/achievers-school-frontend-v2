@@ -53,13 +53,13 @@ const Header: React.FC = () => {
           </div>
         </div>
         <div className="flex space-x-3 xl:text-xl lg:md">
-          <a href="#" className="text-[#2D2D68] bg-[#ECECF4] lg:w-8 lg:h-8  xl:w-10 xl:h-10 flex items-center justify-center rounded-[50%] cursor-pointer">
+          <a href="https://www.facebook.com/achieversinternationalppur/" className="text-[#2D2D68] bg-[#ECECF4] lg:w-8 lg:h-8  xl:w-10 xl:h-10 flex items-center justify-center rounded-[50%] cursor-pointer">
             <FaFacebookF />
           </a>
-          <a href="#" className="text-[#2D2D68] bg-[#ECECF4] lg:w-8 lg:h-8  xl:w-10 xl:h-10 flex items-center justify-center rounded-[50%] cursor-pointer">
+          <a href="https://www.instagram.com/achievers_international_school/" className="text-[#2D2D68] bg-[#ECECF4] lg:w-8 lg:h-8  xl:w-10 xl:h-10 flex items-center justify-center rounded-[50%] cursor-pointer">
             <FaInstagram />
           </a>
-          <a href="#" className="text-[#2D2D68] bg-[#ECECF4] lg:w-8 lg:h-8  xl:w-10 xl:h-10 flex items-center justify-center rounded-[50%] cursor-pointer">
+          <a href="https://www.youtube.com/@Achievers_International_School" className="text-[#2D2D68] bg-[#ECECF4] lg:w-8 lg:h-8  xl:w-10 xl:h-10 flex items-center justify-center rounded-[50%] cursor-pointer">
             <FaYoutube />
           </a>
         </div>
