@@ -40,7 +40,7 @@ const AchieverCard: React.FC<AchieverCardProps> = ({ title, description, image }
                   <Counter
                    icon = {'/images/layers.png'}
                    number={3}
-                   label={'Acres of Campus'}
+                   label={'Acres of Land'}
                   />
                 </div>
             </div>
