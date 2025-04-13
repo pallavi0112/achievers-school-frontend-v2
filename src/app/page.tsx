@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AboutCard from '@/components/AboutCard';
 import AchieverCard from '@/components/AchieverCard';
 import Award from '@/components/Award';
@@ -7,6 +8,11 @@ import HeroSection from '@/components/HeroSection';
 import Links from '@/components/Links';
 import PrincipalSection from '@/components/PrincipalSection';
 
+export const metadata: Metadata = {
+  title: "AISP - Achiever International School Pratappur",
+  description: "A leading CBSE school providing quality education from Nursery to 12th grade.",
+  viewport: "width=device-width, initial-scale=1",
+};
 
 export default function Home() {
   return (

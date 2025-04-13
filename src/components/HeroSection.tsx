@@ -1,13 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
 
 const HeroSection: React.FC = () => {
-  const router = useRouter();
   const redirect = () => {
     window.open('https://youtu.be/clmwoqYhBZY?si=R6P9ezJD4EJRwoyX', '_blank');
   }
