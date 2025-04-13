@@ -88,7 +88,7 @@ const navLinks: MenuItem[] = [
         link: "/facilities/library",
       },
       {
-        label: "SMART CLASS",
+        label: "AI ENABLED CLASSROOM",
         link: "/facilities/smart-class",
       },
     ],
