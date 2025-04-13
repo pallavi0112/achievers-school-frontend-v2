@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FacilityCard from "./FacilityCard";
 import GalleryCard from "./GalleryCard";
-// import NewsCard from "./NewsCard";
 import { FacilityInterface, GalleryInterface, NewsInterface } from "@/interfaces";
 import { BsArrowRight } from "react-icons/bs";
 import MediaCoverage from "./MediaCoverage";
@@ -23,6 +22,12 @@ interface CustomizeSliderProps {
   slidesToScroll?: number;
   variableWidth?: boolean;
 }
+interface InnerSliderWithProps {
+  props: {
+    slidesToShow: number;
+  };
+}
+
 
 const CustomizeSlider = ({
   data = [],
@@ -40,7 +45,7 @@ const CustomizeSlider = ({
   const [slideCount, setSlideCount] = useState(0);
   const sliderRef = React.useRef<Slider | null>(null);
   const [expandedIndex, setExpandedIndex] = useState<number>(0);
-
+  const [visibleSlides, setVisibleSlides] = useState(slidesToShow);
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -54,8 +59,24 @@ const CustomizeSlider = ({
     slidesToScroll: slidesToScroll,
     variableWidth: variableWidth,
     beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
-    afterChange: (index: number) => setCurrentSlide(index),
-    onInit: () => setSlideCount(data.length),
+    // afterChange: (index: number) => setCurrentSlide(index),
+    // onInit: () => setSlideCount(data.length),
+    afterChange: (index: number) => {
+      setCurrentSlide(index);
+      // const slickSlidesToShow = sliderRef.current?.innerSlider?.props?.slidesToShow;
+      const slickSlidesToShow = (sliderRef.current?.innerSlider as InnerSliderWithProps)?.props?.slidesToShow;
+      if (typeof slickSlidesToShow === "number") {
+        setVisibleSlides(slickSlidesToShow);
+      }
+    },
+    onInit: () => {
+      setSlideCount(data.length);
+      // const slickSlidesToShow = sliderRef.current?.innerSlider?.props?.slidesToShow;
+      const slickSlidesToShow = (sliderRef.current?.innerSlider as InnerSliderWithProps)?.props?.slidesToShow;
+      if (typeof slickSlidesToShow === "number") {
+        setVisibleSlides(slickSlidesToShow);
+      }
+    },
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: Math.min(2, slidesToShow), slidesToScroll: Math.min(2, slidesToScroll), variableWidth: false } },
       { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, variableWidth: false } },
@@ -82,7 +103,8 @@ const CustomizeSlider = ({
             <button
               onClick={() => sliderRef.current?.slickNext()}
               className="w-10 h-10 border-none text-gray-800 bg-[#CAC9FF] rounded-full flex justify-center items-center hover:bg-[#4C49E8] hover:text-white transition disabled:bg-[#ECECF4] disabled:cursor-not-allowed"
-              disabled={currentSlide >= slideCount - slidesToShow} // Disable if at last slide
+              // disabled={currentSlide >= slideCount - slidesToShow} // Disable if at last slide
+              disabled={currentSlide >= slideCount - visibleSlides}
             >
               <FaChevronRight />
             </button>

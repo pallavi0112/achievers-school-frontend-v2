@@ -6,6 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import {  FaBars} from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { showSideBar } from "@/redux/slices/sidebarSlice";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch()
@@ -13,11 +14,19 @@ const Header: React.FC = () => {
     <header className="bg-white text-black py-[15px] max-sm:p-[10px] sm:px-[40px] flex justify-between items-center w-full h-18 shadow-md">
       {/* Left: Logo & Name */}
       <div className="flex space-x-4 max-lg:w-full">
+        <Link
+        href="/"
+        >
         <Image src="/images/logo.png" alt="Logo" width={50} height={50} className="w-[50] h-[50] max-sm:w-[30px] max-sm:h-[30px]"/>
+        </Link>
         <div>
+          <Link
+          href="/"
+          >
           <h1 className="max-sm:text-[12px] max-sm:text-bold lg:text-lg xl:text-2xl font-[700] text-[#393A85]">
             ACHIEVERS INTERNATIONAL SCHOOL
           </h1>
+          </Link>
           <p className="text-xs text-gray-600">
           Near Indian Oil Petrol Pump, Pratappur (C.G.)
           </p>

@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
 
 const HeroSection: React.FC = () => {
+  const router = useRouter();
+  const redirect = () => {
+    window.open('https://youtu.be/clmwoqYhBZY?si=R6P9ezJD4EJRwoyX', '_blank');
+  }
   return (
     <section className="relative w-full lg:h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
@@ -48,7 +56,8 @@ const HeroSection: React.FC = () => {
 
         {/* Watch Tour Button */}
         <button
-          className="mt-14 flex items-center justify-center bg-black bg-opacity-80 hover:bg-opacity-90 text-white max-sm:text-xs text-sm font-medium rounded-full px-6 py-3 shadow-md transition-all duration-300 mx-auto font-[family-name:var(--font-plus-jakarta)]"
+          className="mt-14 flex items-center cursor-pointer justify-center bg-black bg-opacity-80 hover:bg-opacity-90 text-white max-sm:text-xs text-sm font-medium rounded-full px-6 py-3 shadow-md transition-all duration-300 mx-auto font-[family-name:var(--font-plus-jakarta)]"
+          onClick={()=>{redirect()}}
         >
           <span className="mr-2">Watch School Tour</span>
           <FaYoutube className="text-red-500 max-sm:text-sm text-xl" />
