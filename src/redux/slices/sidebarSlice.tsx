@@ -4,8 +4,8 @@ import { RootState } from '../store'
 
 // Define a type for the slice state
 interface SidebarState {
-  isShow:Boolean 
-  isLatestUpdatesModalOpen:Boolean
+  isShow:boolean 
+  isLatestUpdatesModalOpen:boolean
 }
 
 // Define the initial state using that type

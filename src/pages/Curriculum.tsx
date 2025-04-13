@@ -23,7 +23,7 @@ const Curriculum = () => {
                     imageLeft={true}
                     description={
                         <>
-                            <p><strong>Welcome to Achievers International School.</strong> We strive to provide the highest quality education, bridging your child's success with an infrastructure of knowledge and creativity.</p>
+                            <p><strong>Welcome to Achievers International School.</strong> We strive to provide the highest quality education, bridging your child&apos;s success with an infrastructure of knowledge and creativity.</p>
                         </>
                     }
                 />

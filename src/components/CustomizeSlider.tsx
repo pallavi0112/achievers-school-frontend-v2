@@ -13,7 +13,7 @@ import { BsArrowRight } from "react-icons/bs";
 import MediaCoverage from "./MediaCoverage";
 
 interface CustomizeSliderProps {
-  data: any[];
+  data: NewsInterface[] | FacilityInterface[] | GalleryInterface[];
   source: string;
   header?: string;
   viewAllPageLink?: string;
@@ -105,13 +105,13 @@ const CustomizeSlider = ({
         <Slider ref={(slider) => { sliderRef.current = slider; }} {...settings}>
           {
             source === "facility" ?
-              data.map((item: FacilityInterface, index: number) => (
+            (data as FacilityInterface[]).map((item: FacilityInterface, index: number) => (
                 <div key={index} className={`pr-4 pb-8 ${variableWidth ? "w-auto" : "w-full"}`}>
                   <FacilityCard {...item} index={index} />
                 </div>
               ))
               : source === "gallery" ?
-                data.map((item: GalleryInterface, index: number) => (
+              (data as GalleryInterface[]).map((item: GalleryInterface, index: number) => (
                   <div
                     key={index}
                     className={`sm:px-2 transition-all duration-300 ${index === expandedIndex ? "w-[500px]" : "w-[200px]"
@@ -122,7 +122,7 @@ const CustomizeSlider = ({
                   </div>
                 ))
                 :
-                data.map((item: NewsInterface, index: number) => (
+                (data as NewsInterface[]).map((item: NewsInterface, index: number) => (
                   <div key={index} className={` ${variableWidth ? "w-auto" : "w-full"}`}>
                     {/* <NewsCard item={item} /> */}
                     <MediaCoverage item={item}/>

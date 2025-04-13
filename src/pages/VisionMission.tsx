@@ -26,7 +26,7 @@ const VisionMission = () => {
                     description={
                         <>
                             <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify"><strong>“Education is the most powerful weapon which you can use to change the world.” — Nelson Mandela</strong></p>
-                            <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify">At Achievers International School, our vision is to nurture 'Happy Learners' by creating a transformative educational environment where students excel academically and grow emotionally, socially, and physically. Through innovative teaching methods, inclusive practices, and personalized support, we empower students to explore their passions, develop critical skills, and embrace lifelong learning. We strive to cultivate a vibrant community where every child can thrive, equipping them with the confidence, resilience, and compassion to shape a brighter future for themselves and society.
+                            <p className="mb-4 text-[16px] md:text-[18px] text-[#000] text-justify">At Achievers International School, our vision is to nurture Happy Learners by creating a transformative educational environment where students excel academically and grow emotionally, socially, and physically. Through innovative teaching methods, inclusive practices, and personalized support, we empower students to explore their passions, develop critical skills, and embrace lifelong learning. We strive to cultivate a vibrant community where every child can thrive, equipping them with the confidence, resilience, and compassion to shape a brighter future for themselves and society.
                             </p>
                         </>
                     }

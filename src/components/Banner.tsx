@@ -12,7 +12,7 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({ backgroundImage, pageTitle, breadcrumbs }) => {
   return (
     <div
-      className="relative w-full h-[60vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center"
+      className="relative w-full md:h-[60vh] flex flex-col items-center justify-center text-white text-center bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Content */}

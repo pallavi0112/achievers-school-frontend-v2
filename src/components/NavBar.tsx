@@ -54,7 +54,7 @@ const NavBar: React.FC<NavbarProps> = ({ showHeader }) => {
   );
 };
 
-const NavItem: React.FC<{ item: MenuItem , path:String|null }> = ({ item, path }) => {
+const NavItem: React.FC<{ item: MenuItem , path:string|null }> = ({ item, path }) => {
   const isActive = item.link && path === item.link;
   return (
     <li className="relative group xl:text-[14px] lg:text-[10px] py-4">
