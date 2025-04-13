@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         className="w-full flex flex-col items-center bg-cover bg-center px-6 sm:px-10 max-sm:px-[16px] py-12"
         style={{
           backgroundImage:
-            "linear-gradient(to top,rgba(35, 35, 80, 0.67), rgba(35, 35, 80, 0.67)), url(/images/Section.png)",
+            "linear-gradient(to top,rgba(35, 35, 80, 0.67), rgba(35, 35, 80, 0.67)), url(/images/footer.png)",
         }}
       >
         {/* Logo and School Name */}

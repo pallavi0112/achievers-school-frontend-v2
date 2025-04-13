@@ -10,55 +10,103 @@ interface FacultyMember {
 }
 
 const FacultyMembers : FacultyMember[] = [
-    {name : "Dipankar Tiwari",
+    {name : "Mr. Ashok Tiwari",
       title : "Principal",
       image : "/images/faculty.png"
     },
-    {name : "Dipankar Tiwari",
+    {name : "Shikha Sinha",
+      title : "Head Master",
+      image : "/images/faculty.png"
+    },
+    {name : "Maya Goswami",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Renu Jaiswal",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Savita Toppo",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Pooja Jaiswal",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Krishna Kumar",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Roshni Rana",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Pushpendra Singh",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Shakuntala Dewangan",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Durga Mishra",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Jainab Khatun",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Prakhar Pandey",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Niraj Kumar Singh",
+      title : "Teacher",
+      image : "/images/teacher.webp"
+    },
+    {name : "Shashi Nirmalkar",
       title : "Principal",
       image : "/images/faculty.png"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Nidhi Gupta",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Rohanee Prasad Mahra",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Shivani Das",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Riya Gupta",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : " Vishwanath Ram",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Sujata Singh",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Ranjana Chourasia",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Priyanka Gupta",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
+    {name : "Prerna Bharti",
+      title : "Teacher",
+      image : "/images/teacher.webp"
     },
-    {name : "Dipankar Tiwari",
-      title : "Principal",
-      image : "/images/faculty.png"
-    }
-]
+  ]
 
 const Faculties: React.FC = () => {
   return (
