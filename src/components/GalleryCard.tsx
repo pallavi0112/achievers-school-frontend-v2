@@ -9,6 +9,15 @@ interface GalleryCardProps {
 }
 
 const GalleryCard: React.FC<GalleryCardProps> = ({ image, title, date }) => {
+  const formatDate = (dateString: string | undefined): string => {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+    }).format(date);
+};
   return (
     <div className="relative group w-full h-60 overflow-hidden rounded-lg shadow-md transition-all duration-300 ease-in-out">
       {/* Image */}
@@ -23,7 +32,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ image, title, date }) => {
       {/* Overlay */}
       <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
         <h3 className="text-lg font-semibold border-b inline-block">{title}</h3>
-        <p className="text-sm">{date || "15.08.2024" }</p>
+        <p className="text-sm">{formatDate(date)}</p>
       </div>
 
       {/* View All Button */}

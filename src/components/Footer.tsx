@@ -55,19 +55,19 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4 mx-auto my-4">
               <a
-                href="#"
+                href="https://www.facebook.com/achieversinternationalppur/"
                 className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
               >
                 <FaFacebookF/>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/achievers_international_school/"
                 className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
               >
                <FaInstagram/>
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@Achievers_International_School"
                 className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-300"
               >
                <FaYoutube/>
