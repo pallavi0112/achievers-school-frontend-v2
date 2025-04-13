@@ -4,40 +4,36 @@ import { NewsInterface } from "@/interfaces";
 
 const news: NewsInterface[] = [
     {
-        title: "Achievers Internal School Celebrates",
+        title: "Annual Result Ceremony",
         description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N1.png"
+        image: "/images/25 mar 25.jpg",
+        date: "2025-MAr-25",
     },
     {
-        title: "Achievers Internal School Celebrates",
+        title: "Republic Day Celebration",
         description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N2.png"
+        image: "/images/news26jan.jpg",
+        date:"2025-Jan-26",
     },
     {
-        title: "Achievers Internal School Celebrates",
+        title: "Best Emerging School Award",
         description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N3.png"
+        image: "/images/N3.png",
+        date: "2025-Jan-17",
     },
     {
-        title: "Achievers Internal School Celebrates",
+        title: "School Received Recognition up to 12th Grade",
         description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N4.png"
+        image: "/images/6 nov 23.jpg",
+        date: "2023-Nov-06",
     },
     {
-        title: "Achievers Internal School Celebrates",
+        title: "Voter Awareness Program was Organized",
         description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N1.png"
+        image: "/images/30 aug 23.jpg",
+        date: "2023-Aug-30",
     },
-    {
-        title: "Achievers Internal School Celebrates",
-        description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N2.png"
-    },
-    {
-        title: "Achievers Internal School Celebrates",
-        description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/N3.png"
-    },
+
     
 ];
 

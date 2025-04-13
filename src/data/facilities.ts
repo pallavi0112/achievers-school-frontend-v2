@@ -4,7 +4,7 @@ import { FacilityInterface } from "@/interfaces";
 const facilities: FacilityInterface[] = [
     {
         title: "AI Enabled Classrooms",
-        description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
+        description: "Our AI-enabled classroom offers personalized learning using advanced technology.",
         image: "/images/F1.png",
         iconImage: "/images/Online learning.png"
     },
@@ -15,22 +15,22 @@ const facilities: FacilityInterface[] = [
         iconImage: "/images/Books.png"
     },
     {
-        title: "AI Enabled Classrooms",
-        description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
+        title: "Laboratories",
+        description: "There are different laboratories setup for subjects: Computer Science, Physics, Chemistry",
         image: "/images/F3.png",
         iconImage: "/images/Flask.png"
     },
     {
-        title: "AI Enabled Classrooms",
-        description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/F1.png",
+        title: "Sports Infrastructure",
+        description: "Our school provides well-equipped sports facilities that encourage physical fitness, teamwork, and competitive spirit among students.",
+        image: "/images/f5.jpg",
         iconImage: "/images/Books.png"
     },
     {
-        title: "AI Enabled Classrooms",
-        description: "The school has Hi-Tech smart class teaching system in place to foster effective learning through audio and video.",
-        image: "/images/F1.png",
-        iconImage: "/images/Books.png"
+        title: "School Transport",
+        description: "Our reliable school transport system ensures safe and timely travel for students across all major routes in the city.",
+        image: "/images/f6.jpeg",
+        iconImage: "/images/bus.png"
     },
 ];
 

@@ -34,7 +34,7 @@ const PrincipalSection: React.FC = () => {
                         />
                         {/* Overlay for Name & Designation */}
                         <div className="absolute bottom-0 left-0 w-[max-content] bg-[#3F4092] text-white p-4 rounded-tr-lg">
-                            <p className="text-lg font-semibold">Principal’s Name</p>
+                            <p className="text-lg font-semibold">Mr. Ashok Tiwari</p>
                             <p className="max-sm:text-xs text-sm">Principal, Achievers International School, Pratappur</p>
                         </div>
                     </div>

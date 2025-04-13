@@ -1,7 +1,7 @@
-import React from 'react'
+console.log('Gallery component rendered');import React from 'react'
 import Tag from './Tag'
 import CustomizeSlider from './CustomizeSlider'
-import facilities from '@/data/facilities'
+import galleries from '@/data/gallery';
 
 const Gallery:React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Gallery:React.FC = () => {
     backgroundColor='bg-[#CAC9FF]'
     />
     <CustomizeSlider
-      data = {facilities} 
+      data = {galleries} 
       header = {"Our Gallery"}
       source = "gallery"
       // variableWidth = {true}

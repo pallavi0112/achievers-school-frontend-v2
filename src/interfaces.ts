@@ -18,6 +18,7 @@ export interface NewsInterface {
   image: string;
   title: string;
   description: string;
+  date: string;
   }
 export interface Breadcrumb {
     label: string;
