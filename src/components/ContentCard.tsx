@@ -17,13 +17,13 @@ const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imag
     >
       {/* Image Section */}
       <div className={`w-full md:w-[1/2] flex  ${imageLeft ? "md:justify-end" : "" }  `}>
-        <div className="w-[100%] sm:w-[80%] h-full rounded-lg p-4 bg-white shadow-md">
+        <div className="w-[100%] sm:w-[80%] h-full rounded-lg p-4 bg-white shadow-xs">
           <Image
             src={image}
             alt={alt}
             width={400}
             height={300}
-            className="w-full h-auto object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-lg"
           />
         </div>
       </div>

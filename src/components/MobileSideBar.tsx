@@ -8,7 +8,7 @@ import { hideSideBar } from '@/redux/slices/sidebarSlice';
 import { RootState } from '@/redux/store';
 import { usePathname } from 'next/navigation';
 import { linkItems } from '@/constant/links.constant';
-import { LinkItem } from '@/interfaces';
+import { LinkItem, MenuItem } from '@/interfaces';
 import { MdKeyboardArrowDown } from "react-icons/md";
 const MobileSidebar: React.FC = () => {
   const dispatch = useDispatch();
@@ -88,7 +88,11 @@ const MobileSidebar: React.FC = () => {
           {/* Navigation Links */}
           <ul className="flex flex-col text-white p-5">
             {navLinks.map((item, index) => {
-              const isActive = item.link && pathname === item.link;
+                const isActive = (
+                  (item.link && pathname === item.link) ||
+                  pathname?.includes(item?.label?.toLocaleLowerCase()) ||
+                  (item.submenu && item.submenu.some((subItem: MenuItem) => pathname === subItem.link))
+                );
               return (
                 <li key={index} className="border-b border-white/30">
                   {item.submenu ? (
@@ -108,18 +112,42 @@ const MobileSidebar: React.FC = () => {
                       </div>
                     </button>
                   ) : (
-                    <Link
-                      href={item.link || '#'}
-                      className={`relative block py-3 px-2 text-[14px] ${
-                        isActive ? 'font-semibold' : ''
-                      }`}
-                      onClick={() => dispatch(hideSideBar())}
-                    >
-                      {item.label}
-                      {isActive && (
-                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
-                      )}
-                    </Link>
+                    <>
+                    {
+                      item?.label == "FEE PAYMENT" ?
+                      (
+                      <Link
+                        href={item.link || '#'}
+                        className={`relative block py-3 px-2 text-[14px] ${
+                          isActive ? 'font-semibold' : ''
+                        }`}
+                        target='_blank'
+                        onClick={() => dispatch(hideSideBar())}
+                      >
+                        {item.label}
+                        {isActive && (
+                          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+                        )}
+                      </Link>
+                      )
+                      :
+                      (
+                      <Link
+                        href={item.link || '#'}
+                        className={`relative block py-3 px-2 text-[14px] ${
+                          isActive ? 'font-semibold' : ''
+                        }`}
+                        onClick={() => dispatch(hideSideBar())}
+                      >
+                        {item.label}
+                        {isActive && (
+                          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+                        )}
+                      </Link>
+                      )
+                    }
+                    </>
+              
                   )}
 
                   {/* Submenu with smooth animation */}

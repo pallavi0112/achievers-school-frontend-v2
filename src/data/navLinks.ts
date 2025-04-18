@@ -120,7 +120,7 @@ const navLinks: MenuItem[] = [
   },
   {
     label: "FEE PAYMENT",
-    link: "/fee-payment",
+    link: "https://aisppur.nexterp.in/nlp/nlp/login",
   },
 ];
 
