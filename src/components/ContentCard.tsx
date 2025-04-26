@@ -6,9 +6,13 @@ interface ContentCardProps {
   description: React.ReactElement;
   image: string;
   imageLeft?: boolean; // Toggle image position
+  principalDetails?: {
+    name: string;
+    address: string;
+  }
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imageLeft = false }) => {
+const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imageLeft = false , principalDetails}) => {
   return (
     <div
       className={`flex flex-col md:flex-row  my-6 md:my-10 rounded-lg ${
@@ -18,6 +22,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imag
       {/* Image Section */}
       <div className={`w-full md:w-[1/2] flex  ${imageLeft ? "md:justify-end" : "" }  `}>
         <div className="w-[100%] sm:w-[80%] h-full rounded-lg p-4 bg-white shadow-xs">
+          <div className={`${principalDetails ? "h-[85%]" : "h-full"} w-full rounded-lg`}>
           <Image
             src={image}
             alt={alt}
@@ -25,6 +30,15 @@ const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imag
             height={300}
             className="w-full h-full object-cover rounded-lg"
           />
+          </div>
+          {
+            principalDetails && (
+              <div className="mt-4 h-[100px]">
+                <h2 className="text-[18px] md:text-[24px] font-semibold text-[#393A85]">{principalDetails.name}</h2>
+                <p className="text-[14px] md:text-[18px] text-[#5A5A5A]">{principalDetails.address}</p>
+              </div>
+            )
+          }
         </div>
       </div>
       
