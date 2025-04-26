@@ -1,20 +1,22 @@
-import React from "react";
-import Banner from "@/components/Banner";
-import SubTitle from "@/components/SubTitle";
-import Title from "@/components/Title";
-import ContentCard from "@/components/ContentCard";
-import { Breadcrumb } from "@/interfaces";
+import React from 'react'
+import { Breadcrumb } from '@/interfaces';
+import Banner from '@/components/Banner';
+import SubTitle from '@/components/SubTitle';
+import Title from '@/components/Title';
+import ContentCard from '@/components/ContentCard';
+import Links from '@/components/Links';
 
 const breadcrumbs: Breadcrumb[] = [
     { label: "Home", url: "/" },
-    { label: "About Us", url: "/about-us" },
-    { label: "Welcome to AIS", url: "" },
+    { label: "About Us", url: "/admission/admission-process" },
+    { label: "Welcome to AIS", url: "/admission/admission-process" },
 ];
 
-const SmartClass = () => {
+const AdmissionProcess = () => {
   return (
     <>
-    <Banner backgroundImage="/images/Section.png" pageTitle="Welcome to AIS" breadcrumbs={breadcrumbs} />
+    <Banner backgroundImage="/images/Section.png" pageTitle="ADMISSION PROCESS" breadcrumbs={breadcrumbs} />
+    <Links/>
     <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
         <SubTitle subTitle="Welcome to," textAlign="left" />
         <Title title="Achievers International School!" textAlign="left" />
@@ -29,8 +31,8 @@ const SmartClass = () => {
             }
         />
     </section>
-</>
+    </>
   )
 }
 
-export default SmartClass
+export default AdmissionProcess

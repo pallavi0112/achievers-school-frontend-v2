@@ -1,21 +1,26 @@
 import React from "react";
+import Head from "next/head";
 import Banner from "@/components/Banner";
 import SubTitle from "@/components/SubTitle";
 import Title from "@/components/Title";
 import ContentCard from "@/components/ContentCard";
 import { Breadcrumb } from "@/interfaces";
+import Links from "@/components/Links";
 
 const breadcrumbs: Breadcrumb[] = [
     { label: "Home", url: "/" },
-    { label: "About Us", url: "/about-us/principals-note" },
-    { label: "Principal’s Note", url: "/about-us/principals-note" },
+    { label: "About Us", url: "/principals-note" },
+    { label: "Principal’s Note", url: "/principals-note" },
 ];
 
 const PrincipalsNote = () => {
     return (
         <>
+            <Head>
+                <title>Principal&apos;s Note - Achievers International School</title>
+            </Head>
             <Banner backgroundImage="/images/Section.png" pageTitle="Principal&apos;s Note" breadcrumbs={breadcrumbs} />
-
+            <Links />
             <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
                 <SubTitle subTitle="Welcome from," textAlign="left" />
                 <Title title="The Principal" textAlign="left" />

@@ -22,7 +22,7 @@ const data = [
 const Award: React.FC = () => {
     return (
         <section
-            className="relative bg-[#1A1B3D] h-auto lg:h-[600px] flex flex-col justify-end items-center px-6 sm:px-12 lg:px-24 py-[24px] md:py-[50px]"
+            className="relative bg-[#1A1B3D] h-auto lg:h-[550px] flex flex-col justify-end items-center px-6 sm:px-12 lg:px-24 py-[24px] md:py-[64px]"
             style={{
                 background: "linear-gradient(0deg, rgba(26, 27, 61, 0.60) 0%, rgba(26, 27, 61, 0.60) 100%), url('/images/award section.png')",
                 backgroundSize: "cover",
@@ -56,7 +56,7 @@ const Award: React.FC = () => {
 
             {/* Awards Section at the End */}
             <div className="w-full flex-grow flex flex-col justify-end items-center">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+                <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-6  w-full max-w-6xl justify-items-center">
                     {data.map((item, index) => (
                         <AwardCard key={index} image={item.image} description={item.description} index={index} />
                     ))}

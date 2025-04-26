@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { hideSideBar } from '@/redux/slices/sidebarSlice';
 import { RootState } from '@/redux/store';
 import { usePathname } from 'next/navigation';
-import { linkItems } from '@/constant/links.constant';
-import { LinkItem } from '@/interfaces';
+import { LinkItem, MenuItem } from '@/interfaces';
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { SideBarLinkItems } from '@/constant/links.constant';
 const MobileSidebar: React.FC = () => {
   const dispatch = useDispatch();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -62,7 +62,7 @@ const MobileSidebar: React.FC = () => {
             {/* Extra Information */}
             {!isHomePage && (
               <div className="flex gap-2 text-white text-sm py-2">
-                {linkItems.slice(0, 2).map((item: LinkItem, index: number) => (
+                {SideBarLinkItems.slice(0, 2).map((item: LinkItem, index: number) => (
                   <div
                     key={index}
                     className="flex justify-center items-center border-2 gap-2 border-[#CAC9FF] bg-[#EEF] text-[#3B39B5] rounded-lg p-2 w-50 cursor-pointer"
@@ -88,7 +88,11 @@ const MobileSidebar: React.FC = () => {
           {/* Navigation Links */}
           <ul className="flex flex-col text-white p-5">
             {navLinks.map((item, index) => {
-              const isActive = item.link && pathname === item.link;
+                const isActive = (
+                  (item.link && pathname === item.link) ||
+                  pathname?.includes(item?.label?.toLocaleLowerCase()) ||
+                  (item.submenu && item.submenu.some((subItem: MenuItem) => pathname === subItem.link))
+                );
               return (
                 <li key={index} className="border-b border-white/30">
                   {item.submenu ? (
@@ -108,18 +112,42 @@ const MobileSidebar: React.FC = () => {
                       </div>
                     </button>
                   ) : (
-                    <Link
-                      href={item.link || '#'}
-                      className={`relative block py-3 px-2 text-[14px] ${
-                        isActive ? 'font-semibold' : ''
-                      }`}
-                      onClick={() => dispatch(hideSideBar())}
-                    >
-                      {item.label}
-                      {isActive && (
-                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
-                      )}
-                    </Link>
+                    <>
+                    {
+                      item?.label == "FEE PAYMENT" ?
+                      (
+                      <Link
+                        href={item.link || '#'}
+                        className={`relative block py-3 px-2 text-[14px] ${
+                          isActive ? 'font-semibold' : ''
+                        }`}
+                        target='_blank'
+                        onClick={() => dispatch(hideSideBar())}
+                      >
+                        {item.label}
+                        {isActive && (
+                          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+                        )}
+                      </Link>
+                      )
+                      :
+                      (
+                      <Link
+                        href={item.link || '#'}
+                        className={`relative block py-3 px-2 text-[14px] ${
+                          isActive ? 'font-semibold' : ''
+                        }`}
+                        onClick={() => dispatch(hideSideBar())}
+                      >
+                        {item.label}
+                        {isActive && (
+                          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+                        )}
+                      </Link>
+                      )
+                    }
+                    </>
+              
                   )}
 
                   {/* Submenu with smooth animation */}

@@ -1,7 +1,8 @@
 import React from "react";
-import SubTitle from "../components/SubTitle";
-import Title from "../components/Title";
+import SubTitle from "../../components/SubTitle";
+import Title from "../../components/Title";
 import FacultyCard from "@/components/FacultyCard";
+import Links from "@/components/Links";
 
 interface FacultyMember {
   name: string;
@@ -112,8 +113,10 @@ const Faculties: React.FC = () => {
   return (
     <>
     <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
+    <Links/>
     <SubTitle subTitle={"Meet"} textAlign="left" />
     <Title title={"Our Faculty"} textAlign="left" />
+    <p className="text-[#525252] md:text-[20px] text-[16px] my-4">Welcome to Achievers International School. We strive to provide </p>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {FacultyMembers.map((member: FacultyMember, index: number) => (
         <FacultyCard

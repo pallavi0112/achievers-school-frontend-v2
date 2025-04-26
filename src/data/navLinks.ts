@@ -10,19 +10,19 @@ const navLinks: MenuItem[] = [
     submenu: [
       {
         label: "WELCOME TO AIS",
-        link: "/about-us/welcome-to-ais",
+        link: "/welcome-to-ais",
       },
       {
         label: "VISION & MISSION",
-        link: "/about-us/vision-mission",
+        link: "/vision-mission",
       },
       {
         label: "PRINCIPAL’S NOTE",
-        link: "/about-us/principals-note",
+        link: "/principals-note",
       },
       {
         label: "MANDATORY DISCLOSURE (CBSE)",
-        link: "/about-us/mandatory-disclosure-cbse",
+        link: "/public-disclosure",
       },
     ],
   },
@@ -31,19 +31,19 @@ const navLinks: MenuItem[] = [
     submenu: [
       {
         label: "ADMISSION PROCESS",
-        link: "/admission/admission-process",
+        link: "admission-process",
       },
       {
         label: "FEE STRUCTURE",
-        link: "/admission/fee-structure",
+        link: "fee-structure",
       },
       {
         label: "WITHDRAWAL",
-        link: "/admission/withdrawal",
+        link: "withdrawal",
       },
       {
         label: "ACADEMIC STREAMS (XI & XII)",
-        link: "/admission/academic-streams-xi-xii",
+        link: "academic-streams",
       },
     ],
   },
@@ -52,19 +52,19 @@ const navLinks: MenuItem[] = [
     submenu: [
       {
         label: "FACULTY",
-        link: "/academics/faculty",
+        link: "/faculty",
       },
       {
         label: "CURRICULUM",
-        link: "/academics/curriculum",
+        link: "/curriculum",
       },
       {
         label: "ACADEMIC CALENDAR & EVENTS",
-        link: "/academics/academic-calendar-events",
+        link: "/academic-calendar-events",
       },
       {
         label: "AWARDS",
-        link: "/academics/awards",
+        link: "/awards",
       },
     ],
   },
@@ -73,33 +73,25 @@ const navLinks: MenuItem[] = [
     submenu: [
       {
         label: "LABORATORIES",
-        link: "/facilities/laboratories",
+        link: "/laboratories",
       },
       {
         label: "SPORTS INFRASTRUCTURE",
-        link: "/facilities/sports-infrastructure",
+        link: "/sports-infrastructure",
       },
       {
         label: "SCHOOL TRANSPORT",
-        link: "/facilities/school-transport",
+        link: "/school-transport",
       },
       {
         label: "LIBRARY",
-        link: "/facilities/library",
+        link: "/library",
       },
       {
         label: "AI ENABLED CLASSROOM",
-        link: "/facilities/smart-class",
+        link: "/smart-class",
       },
     ],
-  },
-  {
-    label: "CAREER OPPORTUNITY",
-    link: "/career-opportunity",
-  },
-  {
-    label: "CONTACT US",
-    link: "/contact-us",
   },
   {
     label: "NEWS & EVENTS",
@@ -120,8 +112,16 @@ const navLinks: MenuItem[] = [
   },
   {
     label: "FEE PAYMENT",
-    link: "/fee-payment",
+    link: "https://aisppur.nexterp.in/nlp/nlp/login",
   },
+  {
+    label: "CAREER OPPORTUNITY",
+    link: "/career-opportunity",
+  },
+  // {
+  //   label: "CONTACT US",
+  //   link: "/contact-us",
+  // },
 ];
 
 export default navLinks;

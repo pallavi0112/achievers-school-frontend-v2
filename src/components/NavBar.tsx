@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { MenuItem } from "@/interfaces";
-import { FaChevronDown as ChevronDown, FaChevronRight as ChevronRight, FaBars} from "react-icons/fa";
+import { FaChevronDown as ChevronDown, FaChevronRight as ChevronRight, FaBars } from "react-icons/fa";
 import navLinks from "@/data/navLinks";
 import { HiOutlinePhone } from "react-icons/hi";
 import { MdOutlineEmail } from "react-icons/md";
@@ -36,7 +36,7 @@ const NavBar: React.FC<NavbarProps> = ({ showHeader }) => {
               <span className="text-[14px] font-[500]">7999671694 | 9098418685</span>
             </div>
             <div className={`${showHeader ? 'block text-[25px] cursor-pointer' : 'hidden'}`}>
-              <FaBars onClick={()=>dispatch(showSideBar())}/>
+              <FaBars onClick={() => dispatch(showSideBar())} />
             </div>
           </div>
           <div className="flex gap-1">
@@ -54,27 +54,43 @@ const NavBar: React.FC<NavbarProps> = ({ showHeader }) => {
   );
 };
 
-const NavItem: React.FC<{ item: MenuItem , path:string|null }> = ({ item, path }) => {
-  const isActive = item.link && path === item.link;
+const NavItem: React.FC<{ item: MenuItem, path: string | null }> = ({ item, path }) => {
+  const isActive = (
+    (item.link && path === item.link) ||
+    path?.includes(item?.label?.toLocaleLowerCase()) ||
+    (item.submenu && item.submenu.some((subItem: MenuItem) => path === subItem.link))
+  );
   return (
     <li className="relative group xl:text-[14px] lg:text-[10px] py-4">
-      {item.link ? (
-        <Link 
-        href={item.link} 
-        className={`flex items-center gap-1 text-[#FFFFFF] relative ${
-          isActive ? 'font-bold' : ''
-        }`}>
+      {item.label === "FEE PAYMENT" ? (
+        <a
+          href={item?.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 text-[#FFFFFF] relative"
+        >
+          {item.label}
+        </a>
+      ) : item.link ? (
+        <Link
+          href={item.link}
+          className={`flex items-center gap-1 text-[#FFFFFF] relative ${isActive ? 'font-bold' : ''}`}
+        >
           {item.label}
           {isActive && (
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
           )}
         </Link>
       ) : (
-        <span className="cursor-pointer flex items-center gap-1 text-[#FFFFFF]">
+        <span className="relative cursor-pointer flex items-center gap-1 text-[#FFFFFF]">
           {item.label}
           {item.submenu && <ChevronDown className="xl:w-4 xl:h-4 lg:w-2 lg:h-2" />}
+          {isActive && (
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+          )}
         </span>
       )}
+
 
       {item.submenu && (
         <ul
@@ -87,39 +103,62 @@ const NavItem: React.FC<{ item: MenuItem , path:string|null }> = ({ item, path }
           {item.submenu.map((subItem, index) => {
             const isSubActive = subItem.link && path === subItem.link;
             return (
-            <li
-              key={index}
-              className={`px-4 py-2 my-2 text-[14px] text-[500] text-[#2D2D68] hover:bg-[#3F4092] hover:text-[#fff] rounded-sm relative group ${
-                isSubActive ? 'bg-[#3F4092] text-white' : 'text-[#2D2D68]'
-              }`}
-            >
-              {subItem.submenu ? (
-                <div className="flex justify-between items-center cursor-pointer">
-                  {subItem.label}
-                  <ChevronRight className="xl:w-4 xl:h-4 lg:w-2 lg:h-2" />
-                </div>
-              ) : (
-                <Link href={subItem.link || "#"} className="block hover:pl-3 transition-all ease-in-out duration-500">
-                  {subItem.label}
-                </Link>
-              )}
-              {subItem.submenu && (
-                <ul
-                  className="absolute left-full top-0 mt-0 bg-white shadow-lg rounded-md py-2 w-48 
+              <li
+                key={index}
+                className={`px-4 py-2 my-2 text-[14px] text-[500] text-[#2D2D68] hover:bg-[#3F4092] hover:text-[#fff] rounded-sm relative group ${isSubActive ? 'bg-[#3F4092] text-white' : 'text-[#2D2D68]'
+                  }`}
+              >
+                {subItem.submenu ? (
+                  <div className="flex justify-between items-center cursor-pointer">
+                    {subItem.label}
+                    <ChevronRight className="xl:w-4 xl:h-4 lg:w-2 lg:h-2" />
+                  </div>
+                ) : (
+
+                  <>
+                    {subItem.link?.endsWith(".pdf") ? (
+                      // <a
+                      //   href={subItem.link}
+                      //   target="_blank"
+                      //   rel="noopener noreferrer"
+                      //   className={`flex items-center gap-1 text-[#FFFFFF] relative ${isActive ? 'font-bold' : ''}`}
+                      // >
+                      //   {subItem.label}
+                      // </a>
+                      <Link
+                        href={subItem.link || "#"}
+                        target="_blank"
+                        rel="oopener noreferrer"
+                        className="block hover:pl-3 transition-all ease-in-out duration-500">
+                        {subItem.label}
+                      </Link>
+                    ) : (
+                      <Link
+                        href={subItem.link || "#"}
+                        className="block hover:pl-3 transition-all ease-in-out duration-500">
+                        {subItem.label}
+                      </Link>
+                    )}
+                  </>
+                )}
+                {subItem.submenu && (
+                  <ul
+                    className="absolute left-full top-0 mt-0 bg-white shadow-lg rounded-md py-2 w-48 
                              overflow-hidden max-h-0 opacity-0 group-hover:max-h-60 group-hover:opacity-100
                              transition-all ease-in-out duration-300 origin-top
                              before:content-[''] before:absolute before:top-2 before:left-[-12px]
                              before:border-[6px] before:border-transparent before:border-r-white"
-                >
-                  {subItem.submenu.map((subSubItem, idx) => (
-                    <li key={idx} className="px-4 py-2 hover:bg-gray-100">
-                      <Link href={subSubItem.link || "#"}>{subSubItem.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          )})}
+                  >
+                    {subItem.submenu.map((subSubItem, idx) => (
+                      <li key={idx} className="px-4 py-2 hover:bg-gray-100">
+                        <Link href={subSubItem.link || "#"}>{subSubItem.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            )
+          })}
         </ul>
       )}
     </li>

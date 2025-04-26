@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import LatestUpdatesModal from './LatestUpdatesModal';
 import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
@@ -8,10 +8,13 @@ import { useDispatch } from 'react-redux';
 import { showLatestUpdatesModal } from '@/redux/slices/sidebarSlice';
 import { LinkItem } from '@/interfaces';
 import { linkItems } from '@/constant/links.constant';
+import { usePathname } from 'next/navigation';
 
 const Links = () => {
   const dispatch = useDispatch();
   const { isLatestUpdatesModalOpen } = useSelector((state: RootState) => state.sidebarSlice);
+  const pathname = usePathname();
+  const [isHomePage ,  setIsHomePage] =  useState(true)
 
   // Handles the click event on a desktop link
   const handleClick = (item: LinkItem) => {
@@ -21,42 +24,55 @@ const Links = () => {
       dispatch(showLatestUpdatesModal());
     }
   };
-
+  useEffect(()=>{
+    if(pathname != '/'){
+        setIsHomePage(false)
+    }else{
+      setIsHomePage(true)
+    }
+  },[pathname])
   return (
     <div>
       {/* Mobile Version: shown on small screens */}
-      <div className='block lg:hidden max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] pt-[24px]'>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[12px] text-white text-sm py-2">
-          {linkItems.map((item, index) => (
-            <div key={index} className="flex justify-start items-center border-2 gap-2 border-[#CAC9FF] bg-[#EEF] text-[#3B39B5] rounded-lg p-2 cursor-pointer"
-              onClick={() => handleClick(item)}
-            >
-              <div
-                className='w-8 h-8'
+      {
+        isHomePage ? (
+          <div className='block lg:hidden max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] pt-[24px]'>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[12px] text-white text-sm py-2">
+            {linkItems.map((item, index) => (
+              <div key={index} className="flex justify-start items-center border-2 gap-2 border-[#CAC9FF] bg-[#EEF] text-[#3B39B5] rounded-lg p-2 cursor-pointer"
+                onClick={() => handleClick(item)}
               >
-                <Image
-                  src={item.img}
-                  width={30}
-                  height={30}
-                  alt={item.text}
-                  className=''
-                />
+                <div
+                  className='w-8 h-8'
+                >
+                  <Image
+                    src={item.img}
+                    width={30}
+                    height={30}
+                    alt={item.text}
+                    className=''
+                  />
+                </div>
+                <p className="text-[12px] font-[700]">{item.text}</p>
               </div>
-              <p className="text-[12px] font-[700]">{item.text}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+        )
+        :
+        <></>
+      }
+      
 
       {/* Desktop Sidebar: shown on large screens */}
       <div className='hidden lg:flex flex-col jutify-end items-end fixed right-0 top-1/2 transform -translate-y-1/2 gap-2 z-50 transition-all duration-300 ease-in-out'>
         {linkItems.slice(0, 3).map((item, index) => (
           <div
             key={index}
-            className="group flex items-center justify-start gap-2 p-2 bg-[#23226B] border border-[#23226B] rounded-l-lg overflow-hidden cursor-pointer transition-all duration-300 hover:w-60 w-12"
+            className="group flex items-center justify-start gap-2 p-2 bg-[#23226B] border border-[#23226B] rounded-l-lg overflow-hidden cursor-pointer transition-all duration-300 animate-color-shifts hover:w-60 w-12"
             onClick={() => handleClick(item)}
           >
-            <div className="w-10 h-10 bg-[#23226B] flex justify-center items-center">
+            <div className="w-10 h-10 bg-[#23226B] flex justify-center items-center animate-color-shifts">
               <Image src={item.img} width={30} height={30} alt={item.text} className="min-w-[30px] min-h-[30px] object-contain" />
             </div>
             {/* <Image 
