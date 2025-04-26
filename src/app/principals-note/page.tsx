@@ -28,6 +28,10 @@ const PrincipalsNote = () => {
                     image="/images/principal.png"
                     alt="Principal&apos;s Note"
                     imageLeft={true}
+                    principalDetails = {
+                        {name : "Mr. Ashok Tiwari",
+                        address : "Principal, Achievers International School",}
+                    }
                     description={
                         <>
                             <p className="mb-4 text-[18px] text-[#000] text-justify">Dear Parents, Students, and Esteemed Community Members,</p>
@@ -41,8 +45,6 @@ const PrincipalsNote = () => {
                     <p className="mb-4 text-[18px] text-[#000] text-justify">This website serves as a comprehensive resource for information about our school&apos;s programs, policies, and upcoming events. We invite you to explore its various sections and stay connected with our vibrant school community.</p>
                     <p className="mb-4 text-[18px] text-[#000] text-justify">As we embark on this journey together, let us remember that education is a shared endeavour—one that shapes confident individuals and compassionate citizens.</p>
                     <p className="mb-4 text-[18px] text-[#000] text-justify"><strong>Warm regards,</strong></p>
-                    <p className="mb-2 text-[20px] text-[#000] text-justify"><strong>Mr. Ashok Tiwari</strong></p>
-                    <p className=" text-[18px] text-[#000]"><strong> Principal, Achievers International School</strong></p>
                 </div>    
             </section>
         </>
