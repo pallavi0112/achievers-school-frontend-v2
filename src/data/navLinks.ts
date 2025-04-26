@@ -98,15 +98,15 @@ const navLinks: MenuItem[] = [
     submenu: [
       {
         label: "SCHOOL CALENDAR",
-        link: "/news-events/school-calendar",
+        link: "/school-calendar",
       },
       {
         label: "MEDIA COVERAGE",
-        link: "/news-events/media-coverage",
+        link: "/media-coverage",
       },
       {
         label: "IMAGE GALLERY",
-        link: "/news-events/image-gallery",
+        link: "/image-gallery",
       },
     ],
   },
