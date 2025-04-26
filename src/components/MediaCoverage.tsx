@@ -35,6 +35,7 @@ const MediaCoverage: React.FC<MediaCoverageProps> = ({ item }) => {
                     src={item?.image || "/images/news.png"}
                     alt="news"
                     layout="fill"
+                    objectPosition="top"
                     objectFit="cover"
                 />
             </div>
