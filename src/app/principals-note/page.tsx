@@ -26,7 +26,7 @@ const PrincipalsNote = () => {
                 <Title title="The Principal" textAlign="left" />
                 <ContentCard
                     image="/images/principal.png"
-                    alt="Principal’s Note"
+                    alt="Principal&apos;s Note"
                     imageLeft={true}
                     description={
                         <>
