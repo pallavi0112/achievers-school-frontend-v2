@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { hideSideBar } from '@/redux/slices/sidebarSlice';
 import { RootState } from '@/redux/store';
 import { usePathname } from 'next/navigation';
-import { linkItems } from '@/constant/links.constant';
 import { LinkItem, MenuItem } from '@/interfaces';
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { SideBarLinkItems } from '@/constant/links.constant';
 const MobileSidebar: React.FC = () => {
   const dispatch = useDispatch();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -62,7 +62,7 @@ const MobileSidebar: React.FC = () => {
             {/* Extra Information */}
             {!isHomePage && (
               <div className="flex gap-2 text-white text-sm py-2">
-                {linkItems.slice(0, 2).map((item: LinkItem, index: number) => (
+                {SideBarLinkItems.slice(0, 2).map((item: LinkItem, index: number) => (
                   <div
                     key={index}
                     className="flex justify-center items-center border-2 gap-2 border-[#CAC9FF] bg-[#EEF] text-[#3B39B5] rounded-lg p-2 w-50 cursor-pointer"

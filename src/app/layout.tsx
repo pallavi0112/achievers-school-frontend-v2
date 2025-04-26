@@ -4,7 +4,6 @@ import LocationMap from "@/components/LocationMap";
 import Footer from "@/components/Footer";
 import MainHeader from "@/components/MainHeader";
 import Providers from "@/redux/provider";
-import Links from "@/components/Links";
 
 // Load fonts via next/font/google for better performance
 // const geistSans = Geist({
@@ -39,7 +38,6 @@ export default function RootLayout({
         <Providers>
         {/* Header Section (Top bar + Social Links) */}
         <MainHeader/>
-        <Links/>
         {/* Main Content */}
         <main>{children}</main>
 

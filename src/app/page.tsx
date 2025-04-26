@@ -18,6 +18,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <Links/>
       <AboutCard
         imageSrc="/images/1st Image.jpeg"
         subtitle="MISSION"

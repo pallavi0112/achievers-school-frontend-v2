@@ -1,9 +1,10 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import SubTitle from '../components/SubTitle'
-import Title from '../components/Title'
 import { Breadcrumb } from '@/interfaces'
-import StreamTable from '../components/StreamTable'
+import Links from '@/components/Links'
+import Banner from '@/components/Banner';
+import SubTitle from '@/components/SubTitle';
+import Title from '@/components/Title';
+import StreamTable from '@/components/StreamTable';
 
 const breadcrumbs: Breadcrumb[] = [
     { label: "Home", url: "/" },
@@ -22,6 +23,7 @@ const AcademicStreams = () => {
     return (
         <>
             <Banner backgroundImage="/images/Section.png" pageTitle="ACADEMIC STREAMS (XI & XII)" breadcrumbs={breadcrumbs} />
+            <Links/>
             <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
                 <SubTitle subTitle="Welcome to," textAlign="left" />
                 <Title title="Achievers International School!" textAlign="left" />
