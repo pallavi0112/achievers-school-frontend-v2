@@ -9,8 +9,8 @@ import Link from 'next/link';
 
 const breadcrumbs: Breadcrumb[] = [
   { label: 'Home', url: '/' },
-  { label: 'About Us', url: '/admission/admission-process' },
-  { label: 'Welcome to AIS', url: '/admission/admission-process' },
+  { label: 'About Us', url: '/admission-process' },
+  { label: 'Admission Process', url: '' },
 ];
 
 const AdmissionProcess = () => {
@@ -18,16 +18,16 @@ const AdmissionProcess = () => {
     <>
       <Banner
         backgroundImage="/images/Section.png"
-        pageTitle="ADMISSION PROCESS"
+        pageTitle="Admission Process"
         breadcrumbs={breadcrumbs}
       />
       <Links />
       <section className="max-sm:px-[10px] sm:px-[30px] lg:px-[50px] xl:px-[100px] md:py-[50px] py-[24px] bg-[#F6F6FF]">
-        <SubTitle subTitle="Welcome to," textAlign="left" />
-        <Title title="Achievers International School!" textAlign="left" />
+        <SubTitle subTitle="Know about our" textAlign="left" />
+        <Title title="Admission Process" textAlign="left" />
         <ContentCard
           image="/images/Content.png"
-          alt="Welcome to AIS"
+          alt="Admission Process"
           imageLeft={true}
           description={
             <>
@@ -35,8 +35,8 @@ const AdmissionProcess = () => {
                 <div>
                   <h3 className='text-[20px] text-[#212121] font-[600] font-inter'>Step 1: Enquiry</h3>
                   <p className='text-[16px] md:text-[18px] font-medium leading-[27px] text-[#525252] font-inter my-2'>
-                    Begin your journey by reaching out to us. Whether you're a
-                    prospective parent or student, we're here to answer your
+                    Begin your journey by reaching out to us. Whether you&apos;re a
+                    prospective parent or student, we&apos;re here to answer your
                     questions and provide detailed information about our
                     curriculum, facilities, and admission criteria.
                   </p>
@@ -50,7 +50,7 @@ const AdmissionProcess = () => {
                 <div className='mt-8'>
                   <h3 className='text-[20px] text-[#212121] font-[600] font-inter'>Step 2: Application</h3>
                   <p className='text-[16px] md:text-[18px] font-medium leading-[27px] text-[#525252] font-inter my-2'>
-                    Once you've gathered the necessary information, proceed to
+                    Once you&apos;ve gathered the necessary information, proceed to
                     submit your application. This step involves providing
                     essential details and documents to help us understand your
                     aspirations and how we can support them.
@@ -76,7 +76,7 @@ const AdmissionProcess = () => {
           <div className='mt-8'>
             <h3 className='text-[20px] text-[#212121] font-[600] font-inter'>Step 4: Commencement</h3>
             <p className='text-[16px] md:text-[18px] font-medium leading-[27px] text-[#525252] font-inter my-2'>
-            With your admission confirmed, we look forward to welcoming you to the Achievers International School community. You'll receive details about orientation sessions, academic calendars, and other essential information to prepare you for the upcoming academic year.
+            With your admission confirmed, we look forward to welcoming you to the Achievers International School community. You&apos;ll receive details about orientation sessions, academic calendars, and other essential information to prepare you for the upcoming academic year.
             </p>
           </div>
           <p className='text-[16px] md:text-[18px] font-medium leading-[27px] text-[#525252] font-inter mt-8'>
