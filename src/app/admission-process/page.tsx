@@ -32,7 +32,7 @@ const AdmissionProcess = () => {
           description={
             <>
               <div>
-                <div>
+                <div className='-ml-4 md:ml-0'>
                   <h3 className='text-[20px] text-[#212121] font-[600] font-inter'>Step 1: Enquiry</h3>
                   <p className='text-[16px] md:text-[18px] font-medium leading-[27px] text-[#525252] font-inter my-2'>
                     Begin your journey by reaching out to us. Whether you&apos;re a
@@ -47,7 +47,7 @@ const AdmissionProcess = () => {
                     Generate an Enquiry
                   </Link>
                 </div>
-                <div className='mt-8'>
+                <div className='mt-8 -ml-4 md:ml-0'>
                   <h3 className='text-[20px] text-[#212121] font-[600] font-inter'>Step 2: Application</h3>
                   <p className='text-[16px] md:text-[18px] font-medium leading-[27px] text-[#525252] font-inter my-2'>
                     Once you&apos;ve gathered the necessary information, proceed to
