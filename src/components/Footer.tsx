@@ -115,7 +115,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col space-x-4">
               <Link
-                href="#"
+                href="https://www.cbse.gov.in/"
                 className="text-gray-300 text-sm"
               >
                 CBSE Official Website
