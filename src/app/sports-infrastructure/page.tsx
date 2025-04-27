@@ -25,7 +25,7 @@ const SportsInfrastructure = () => {
         <SubTitle subTitle="Explore Our" textAlign="left" />
         <Title title="Sports Infrastructure" textAlign="left" />
         <ContentCard
-          image="/images/Content.png"
+          image="/images/F5.jpeg"
           alt="Sports Infrastructure"
           imageLeft={true}
           description={

@@ -21,7 +21,7 @@ const VisionMission = () => {
                 <SubTitle subTitle="About" textAlign="left" />
                 <Title title="Our Vision" textAlign="left" />
                 <ContentCard
-                    image="/images/Content.png"
+                    image="/images/photo 2.jpg"
                     alt="Our Vision"
                     imageLeft={true}
                     description={
@@ -35,7 +35,7 @@ const VisionMission = () => {
                 <SubTitle subTitle="About" textAlign="right" />
                 <Title title="Our Mission" textAlign="right" />
                 <ContentCard
-                    image="/images/Content.png"
+                    image="/images/photo 4.jpg"
                     alt="Our Mission"
                     imageLeft={false}
                     description={

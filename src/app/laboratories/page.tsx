@@ -25,7 +25,7 @@ const Laboratories = () => {
         <SubTitle subTitle="Discover Our" textAlign="left" />
         <Title title="Laboratories" textAlign="left" />
         <ContentCard
-          image="/images/Content.png"
+          image="/images/F3.webp"
           alt="Welcome to AIS"
           imageLeft={true}
           description={
@@ -49,7 +49,7 @@ const Laboratories = () => {
 
         {/* SOmething adding */}
         <ContentCard
-          image="/images/Content.png"
+          image="/images/chemlab.webp"
           alt="Welcome to AIS"
           imageLeft={false}
           description={
@@ -69,7 +69,7 @@ const Laboratories = () => {
         />
 
         <ContentCard
-          image="/images/Content.png"
+          image="/images/mathlab.webp"
           alt="Welcome to AIS"
           imageLeft={true}
           description={
