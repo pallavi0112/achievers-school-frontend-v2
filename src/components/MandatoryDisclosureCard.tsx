@@ -29,7 +29,7 @@ const MandatoryDisclosureCard: React.FC<MandatoryDisclosureCardProps> = ({title 
             </div>
             <div className="my-[24px] w-full h-[1px] bg-[#EEF]">
             </div>
-            <button className="mt-auto w-[120px] py-[8px] bg-[#EEF] text-[#3F4092] border-[#CAC9FF] rounded-[4px] text-sm font-bold flex items-center justify-center hover:bg-[#d4d1ff] transition">
+            <button className="mt-auto w-[120px] py-[8px] bg-[#EEF] text-[#3F4092] cursor-pointer rounded-[4px] text-sm font-bold flex items-center justify-center hover:bg-[#d4d1ff] transition">
                 View PDF
                 <GoArrowUpRight className='text-[700] text-lg text-[#3F4092]' />
             </button>

@@ -43,7 +43,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imag
       </div>
       
       {/* Content Section */}
-      <div className="w-full md:w-[1/2] px-4 md:px-0 my-4 md:py-0">{description}</div>
+      <div className="w-full md:w-[1/2] px-2 sm:px-4 md:px-0 my-4 md:py-0">{description}</div>
     </div>
   );
 };
