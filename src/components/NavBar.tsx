@@ -78,7 +78,7 @@ const NavItem: React.FC<{ item: MenuItem, path: string | null }> = ({ item, path
         >
           {item.label}
           {isActive && (
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-white"></span>
           )}
         </Link>
       ) : (
@@ -86,7 +86,7 @@ const NavItem: React.FC<{ item: MenuItem, path: string | null }> = ({ item, path
           {item.label}
           {item.submenu && <ChevronDown className="xl:w-4 xl:h-4 lg:w-2 lg:h-2" />}
           {isActive && (
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white"></span>
+            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-white"></span>
           )}
         </span>
       )}

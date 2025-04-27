@@ -28,17 +28,13 @@ const MandatoryDisclosure = () => {
                         { id: 1, title: "Mandatory Public Disclosure", updatedOn: "March 2025" },
                         { id: 2, title: "Prescribed Textbook List", updatedOn: "March 2025" },
                         { id: 3, title: "Faculty Details",  updatedOn: "March 2025" },
-                        { id: 4, title: "Academic Resources", updatedOn: "2023-10-05" },
-                        { id: 5, title: "Affiliation Details", updatedOn: "2023-10-01" },
-                        { id: 6, title: "Infrastructure", updatedOn: "2023-09-25" },
-                        { id: 7, title: "Faculty",  updatedOn: "2023-09-30" },
-                        { id: 8, title: "Academic Resources", updatedOn: "2023-10-05" },
                     ].map((item) => (
                         <MandatoryDisclosureCard key={item.id} title={item.title} updatedOn={item.updatedOn} />
                     ))}
                 </div>
             </section>
         </>
+        
     );
 };
 

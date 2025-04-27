@@ -115,8 +115,8 @@ const navLinks: MenuItem[] = [
     link: "https://aisppur.nexterp.in/nlp/nlp/login",
   },
   {
-    label: "CAREER OPPORTUNITY",
-    link: "/career-opportunity",
+    label: "CAREERS",
+    link: "/careers",
   },
   // {
   //   label: "CONTACT US",
