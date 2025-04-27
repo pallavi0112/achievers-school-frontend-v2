@@ -65,24 +65,18 @@ const Links = () => {
 
 
       {/* Desktop Sidebar: shown on large screens */}
-      <div className='hidden lg:flex flex-col jutify-end items-end fixed right-0 top-1/2 transform -translate-y-1/2 gap-2 z-50 transition-all duration-300 ease-in-out group '>
-        
+      <div className='hidden lg:flex flex-col justify-end items-end fixed right-0 top-1/2 transform -translate-y-1/2 gap-2 z-50 transition-all duration-300 ease-in-out group pointer-events-none'>
+
         {linkItems.slice(0, 3).map((item, index) => (
           <div
             key={index}
-            className={`group flex items-center justify-start gap-2 p-2 bg-[#23226B] border border-[#23226B] rounded-l-lg overflow-hidden cursor-pointer transition-all duration-300 ${index === 0 ? 'w-60 animate-color-shift group-hover:w-12' : 'w-12'} hover:w-60`}
+            className={`group flex items-center justify-start gap-2 p-2 bg-[#23226B] border border-[#23226B] rounded-l-lg overflow-hidden cursor-pointer transition-all duration-300 ${index === 0 ? 'w-60 animate-color-shift group-hover:w-12' : 'w-12'} hover:w-60 pointer-events-auto`}
             onClick={() => handleClick(item)}
           >
             <div className="w-10 h-10 flex justify-center items-center">
               <Image src={item.img} width={30} height={30} alt={item.text} className="min-w-[30px] min-h-[30px] object-contain" />
             </div>
-            {/* <Image 
-            src={item.img} 
-            width={30} 
-            height={30} 
-            alt={item.text} 
-            className="min-w-[30px] min-h-[30px] object-contain" 
-          /> */}
+
             <span className={`whitespace-nowrap text-[#fff] font-medium text-[12px] ${index === 0 ? '' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-300`}>
               {item.text}
             </span>
@@ -91,9 +85,10 @@ const Links = () => {
               <Image src={"/videos/animated_arrow.gif"} width={25} height={25} alt={item.text} className="min-w-[25px] min-h-[25px] object-contain" />
             </div>
           </div>
-
         ))}
+
       </div>
+
 
       {/* Modal Component */}
       {isLatestUpdatesModalOpen && (

@@ -33,7 +33,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ description, image, alt, imag
           </div>
           {
             principalDetails && (
-              <div className="mt-4 h-[100px]">
+              <div className="mt-4">
                 <h2 className="text-[18px] md:text-[24px] font-semibold text-[#393A85]">{principalDetails.name}</h2>
                 <p className="text-[14px] md:text-[18px] text-[#5A5A5A]">{principalDetails.address}</p>
               </div>
