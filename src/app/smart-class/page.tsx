@@ -25,7 +25,7 @@ const SmartClass = () => {
         <SubTitle subTitle="Experience Our" textAlign="left" />
         <Title title="AI-Enabled Classrooms" textAlign="left" />
         <ContentCard
-          image="/images/Content.png"
+          image="/images/F1.webp"
           alt="AI-Enabled Classrooms"
           imageLeft={true}
           description={
