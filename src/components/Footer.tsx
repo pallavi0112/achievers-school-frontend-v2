@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                 CBSE Official Website
               </Link>
               <Link
-                href="#https://www.cbse.gov.in/"
+                href="https://www.cbse.gov.in/"
                 className="text-gray-300 text-sm mt-4"
               >
                 CBSE Results Portal
