@@ -44,14 +44,16 @@ const MobileSidebar: React.FC = () => {
               className={`flex justify-between items-center ${isHomePage ? '' : 'border-b-2 border-b-[#CAC9FF] py-[15px]'}`}
             >
               <div className="flex space-x-3">
-                {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, index) => (
-                  <a
+                {[{icon : FaFacebookF , href : "https://www.facebook.com/achieversinternationalppur/"},{icon :  FaInstagram , href : "https://www.instagram.com/achievers_international_school/"}, {icon : FaYoutube , href : "https://www.youtube.com/@Achievers_International_School"}].map((item, index) => (
+                  <Link
                     key={index}
-                    href="#"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#2D2D68] bg-[#ECECF4] w-8 h-8 flex items-center justify-center rounded-full cursor-pointer"
                   >
-                    <Icon />
-                  </a>
+                    <item.icon />
+                  </Link>
                 ))}
               </div>
               <FaTimes
