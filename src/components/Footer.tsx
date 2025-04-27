@@ -115,33 +115,29 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col space-x-4">
               <Link
-                href="#"
+                href="https://www.cbse.gov.in/"
                 className="text-gray-300 text-sm"
               >
                 CBSE Official Website
               </Link>
               <Link
-                href="#https://www.cbse.gov.in/"
+                href="https://results.cbse.nic.in/"
                 className="text-gray-300 text-sm mt-4"
               >
                 CBSE Results Portal
               </Link>
               <Link
-                href="https://results.cbse.nic.in/"
+                href="https://ncert.nic.in/"
                 className="text-gray-300 text-sm mt-4"
               >
                 NCERT Official Website
               </Link>
               <Link
-                href="https://ncert.nic.in/"
+                href="https://rte.cg.nic.in/"
                 className="text-gray-300 text-sm mt-4"
               >
                 RTE Chhattisgarh Portal
               </Link>
-              <Link
-                href="https://rte.cg.nic.in/"
-                className="text-gray-300 text-sm mt-4"
-                ></Link>
             </div>
           </div>
         </div>

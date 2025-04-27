@@ -13,7 +13,7 @@ const PrincipalSection: React.FC = () => {
     return (
         <section className="px-6 sm:px-12 max-sm:px-[16px] lg:px-24 py-12"
         style={{
-            background: "linear-gradient(0deg, rgba(26, 27, 61, 0.60) 0%, rgba(26, 27, 61, 0.60) 100%), url('/images/award section.png')",
+            background: "linear-gradient(0deg, rgba(26, 27, 61, 0.60) 0%, rgba(26, 27, 61, 0.60) 100%), url('/images/PricipalBG.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat"
