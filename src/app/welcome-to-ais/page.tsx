@@ -21,7 +21,7 @@ const WelcomeToAIS = () => {
                 <SubTitle subTitle="Welcome to," textAlign="left" />
                 <Title title="Achievers International School!" textAlign="left" />
                 <ContentCard
-                    image="/images/Content.png"
+                    image="/images/1st Image.jpeg"
                     alt="Welcome to AIS"
                     imageLeft={true}
                     description={
