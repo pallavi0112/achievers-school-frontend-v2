@@ -69,7 +69,7 @@ const Laboratories = () => {
         />
 
         <ContentCard
-          image="/images/mathlab.webp"
+          image="images/mathlab.png"
           alt="Welcome to AIS"
           imageLeft={true}
           description={

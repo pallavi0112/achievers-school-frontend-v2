@@ -25,7 +25,7 @@ const Page = () => {
         <SubTitle subTitle="Discover Our" textAlign="left" />
         <Title title="School Transport" textAlign="left" />
         <ContentCard
-          image="/images/Content.png"
+          image="/images/F5.jpeg"
           alt="School Transport"
           imageLeft={true}
           description={
