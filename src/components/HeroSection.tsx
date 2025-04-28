@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
         {/* Location */}
         <div className="flex items-center justify-center  text-sm md:text-md lg:text-lg font-light mt-4 font-[family-name:var(--font-plus-jakarta)]">
           {/* <FaMapMarkerAlt className="mr-2 text-white" /> */}
-          <span>A CBSE AFFILIATED SENIOR SECONDARY SCHOOL, Aff. No. 3330478</span>
+          <span>A CBSE AFFILIATED SENIOR SECONDARY SCHOOL, AFFILIATION NO. 3330478</span>
         </div>
 
         {/* Watch Tour Button */}
